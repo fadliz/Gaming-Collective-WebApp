@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: url(../public/image/bakground/Sign\ up\ Page.png) no-repeat center center fixed;
+  background-size: cover;
+  width: 66%;
+  font-family: 'Montserrat', sans-serif;
+}
+.container {
+  position: relative;
+  height: 100vh;
+}
+.form-container {
+  position: absolute;
+  left: 80%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+input {
+  background-color: #333333;
+  border-radius: 20px;
+  padding: 15px 20px;
+  margin: 15px 0px;
+  width: 100%;
+}
+form {
+  background-color: #1A1A1A;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  padding: 5 50px;
+  text-align: center;
+  border-radius: 30px;
+  color: white;
+}
+
+label {
+  color: white;
+  text-align: left;
+  display: block;
+  font-size: 18px;
+}
+button {
+  border-radius: 30px;
+  color: #FFFFFF;
+  background-color: #FFAC42;
+  font-size: 24px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 150px;
+  text-align: center;
+  margin: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+	.form-container{
+		position: static;
+		transform: none;
+		width: 100%;
+	}
+	body{
+		background: #1A1A1A;
+	}
+
+	button{
+		padding: 5px 30px;
+	}
+}
