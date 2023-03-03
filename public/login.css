@@ -5,15 +5,17 @@
 body {
   margin: 0;
   padding: 0;
-  background: url(../public/image/bakground/Sign\ up\ Page.png) no-repeat center center fixed;
+  background: url(../public/image/bakground/Login_Background.png) no-repeat center center fixed;
   background-size: cover;
   width: 66%;
   font-family: 'Montserrat', sans-serif;
 }
+
 .container {
   position: relative;
   height: 100vh;
 }
+
 .form-container {
   position: absolute;
   left: 80%;
