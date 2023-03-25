@@ -11,7 +11,8 @@ body {
     position: relative;
     min-height: 100vh;
     width: 100%;
-    overflow: hidden;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 .content {
@@ -73,10 +74,7 @@ body {
 
 .carousel-inner {
     border-radius: 25px;
-    overflow: hidden;
-}
-
-.item {
+    overflow: scroll;
 }
 
 .item .deals {
@@ -84,12 +82,32 @@ body {
 }
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    border-radius: 5px; /* 5px rounded corners */
+    border: none;
 }
 
-/* Add rounded corners to the top left and the top right corner of the image */
-.card img {
-    border-radius: 5px 5px 0 0;
+.card-body {
+    background-color: #333333;
+}
+
+.card-body h5 {
+    font-weight: 700;
+    color: #fffdfd;
+}
+
+.card-body h6 {
+    color: #999999;
+}
+
+.card-body p {
+    color: #fffdfd;
+}
+
+.card button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fffdfd;
+    background-color: #ffac42;
+    border-radius: 75px;
+    font-weight: 500;
 }
