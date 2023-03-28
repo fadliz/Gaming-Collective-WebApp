@@ -1,17 +1,18 @@
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="/public/login.css">
+    <link rel="stylesheet" href="/login.css">
     <title>OurApp</title>
 </head>
 <body>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-          <form action="index.html" method="post">
+          <form action="/" method="post">
+            @csrf
             <h1>Login</h1>
-            <label for="nama">Nama</label>
-            <input type="text" id="nama" name="nama" placeholder="Nama"  />
             <label for="username">Username</label>
             <input type="text" id="username" name="username" placeholder="Username" />
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password" />
             <button>Login</button>
           </form>
         </div>

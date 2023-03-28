@@ -24,7 +24,7 @@
             </button>
     </div>
     <div class="profile p-5">
-        <span>Welcome, Jinx !</span>
+        <span>Welcome, {{auth()->user()->username}} !</span>
         <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="/image/gf image/fahri_GF_2.jpg" alt="" width="36" height="36" class="rounded-circle me-2" />
         </a>
@@ -37,7 +37,7 @@
             <li>
                 <hr class="dropdown-divider" />
             </li>
-            <li><a class="dropdown-item" href="#">Sign out</a></li>
+            <li><a class="dropdown-item" href="/logout">Sign out</a></li>
         </ul>
     </div>
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
