@@ -66,31 +66,15 @@
             </div>
           </div>
           <div class="col-lg-6 col-md-12 col-12">
-            <h3>
+            <h3 style='font-weight : 700;'>
               Headset Cantik
             </h3>
             <hr />
-            <div class="time-and-bid pb-5">
+            <div class="time-and-bid pb-1">
                 <i class="bx bx-grid-alt"></i>
                 <span class="link_name">Category : <a href="#">Headset</a></span>
             </div>
-            <h5>Harga Terkini</h5>
-            <h3 class="detail-item-harga">Rp. 3.000.000,00</h3>
-            <div class="box-button">
-              <a href="#popup1"
-                ><button type="button" class="btn btn-primary btn-lg button-bid">
-                  Bid | + Rp. 50.000
-                </button></a
-              >
-            </div>
-  
-            <div id="popup1" class="overlay">
-              <div class="popup">
-                <h2>Berhasil !</h2>
-                <a class="close" href="#">&times;</a>
-                <div class="content">Sukses menambahkan bid !</div>
-              </div>
-            </div>
+            
   
             <hr />
             <h5>Deskripsi Produk</h5>
@@ -99,27 +83,16 @@
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <hr />
-            <div class="d-flex flex-row align-items-center profile-section">
-              <a href=""
-                ><img
-                  src="/image/gf image/fahri_GF_2.jpg"
-                  class="rounded-circle store-image"
-              /></a>
-              <div class="d-flex flex-column ml-1 comment-profile">
-                <span class="username">Jinx</span>
-                <div class="seller-profile">
-                  <i class="bx bx-map"></i>
-                  <span class="followers">Kota Bandung</span>
-                  <span> | </span>
-                  <i class="bx bxs-star"></i>
-                  <span>4.9 / 5.0</span>
-                </div>
-              </div>
+            <h3 class="detail-item-harga pb-5">Rp. 3.000.000,00</h3>
+            <div class="box-button">
+              <a href="#" class="bn3637 bn37">Add to Cart</a>
+              
             </div>
           </div>
         </div>
       </div>
       <script src="/ProductDetail.js" charset="utf-8"></script>
+      
     @endsection
 
 </body>
