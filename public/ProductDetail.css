@@ -50,6 +50,16 @@ body {
     margin: 0px 6px;
 }
 
+.time-and-bid a {
+    text-decoration: none;
+    color: #aaa;
+    transition: all 0.4s ease;
+}
+
+.time-and-bid a:hover {
+    color: #fffdfd;
+}
+
 .detail-item-harga {
     font-weight: bold;
     color: #ff1f57;

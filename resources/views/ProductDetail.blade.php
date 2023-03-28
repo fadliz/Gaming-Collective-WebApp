@@ -41,7 +41,7 @@
               </div>
               <div class="small-img-col">
                 <img
-                  src="/image/gf image/fahri_GF_4.webp"
+                  src="/image/gf image/fahri_GF_1.jpg"
                   width="100%"
                   class="small-img"
                   alt=""
