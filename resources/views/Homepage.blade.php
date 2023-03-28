@@ -23,6 +23,7 @@
                 <i class='bx bx-search'></i>
             </button>
     </div>
+    @auth
     <div class="profile p-5">
         <span>Welcome, {{auth()->user()->username}} !</span>
         <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -40,6 +41,14 @@
             <li><a class="dropdown-item" href="/logout">Sign out</a></li>
         </ul>
     </div>
+    @endauth
+
+    @guest
+    <div class="box-button">
+        <a href="#" class="bn3637 bn37">Login</a>
+        <a href="#" class="bn3638 bn38">Sign Up</a>
+      </div>
+    @endguest
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
         <div class="carousel-indicators ">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
