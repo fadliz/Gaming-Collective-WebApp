@@ -85,7 +85,7 @@
                     <div class="hs__item__description">
                         <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
                     </div>
-                    <button class="button button5">add to cart</button>
+                    <button class="button button5">Add to Cart</button>
                 </li>
                 <li class="hs__item">
                     <div class="hs__item__image__wrapper">
@@ -94,7 +94,7 @@
                     <div class="hs__item__description">
                         <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
                     </div>
-                    <button class="button button5">add to cart</button>
+                    <button class="button button5">Add to Cart</button>
                 </li>
                 <li class="hs__item">
                     <div class="hs__item__image__wrapper">
@@ -103,7 +103,7 @@
                     <div class="hs__item__description">
                         <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
                     </div>
-                    <button class="button button5">add to cart</button>
+                    <button class="button button5">Add to Cart</button>
                 </li>
                 <li class="hs__item">
                     <div class="hs__item__image__wrapper">
@@ -112,7 +112,7 @@
                     <div class="hs__item__description">
                         <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
                     </div>
-                    <button class="button button5">add to cart</button>
+                    <button class="button button5">Add to Cart</button>
                 </li>
                 <li class="hs__item">
                     <div class="hs__item__image__wrapper">
@@ -121,7 +121,7 @@
                     <div class="hs__item__description">
                         <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
                     </div>
-                    <button class="button button5">add to cart</button>
+                    <button class="button button5">Add to Cart</button>
                 </li>
                 <li class="hs__item">
                     <div class="hs__item__image__wrapper">
@@ -130,7 +130,7 @@
                     <div class="hs__item__description">
                         <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
                     </div>
-                    <button class="button button5">add to cart</button>
+                    <button class="button button5">Add to Cart</button>
                 </li>
             </ul>
         </div>
@@ -154,7 +154,7 @@
                         <div class="hs__item__description">
                             <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
                         </div>
-                        <button class="button button5">add to cart</button>
+                        <button class="button button5">Add to Cart</button>
                     </li>
                     <li class="hs__item">
                         <div class="hs__item__image__wrapper">
@@ -163,7 +163,7 @@
                         <div class="hs__item__description">
                             <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
                         </div>
-                        <button class="button button5">add to cart</button>
+                        <button class="button button5">Add to Cart</button>
                     </li>
                     <li class="hs__item">
                         <div class="hs__item__image__wrapper">
@@ -172,7 +172,7 @@
                         <div class="hs__item__description">
                             <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
                         </div>
-                        <button class="button button5">add to cart</button>
+                        <button class="button button5">Add to Cart</button>
                     </li>
                     <li class="hs__item">
                         <div class="hs__item__image__wrapper">
@@ -181,7 +181,7 @@
                         <div class="hs__item__description">
                             <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
                         </div>
-                        <button class="button button5">add to cart</button>
+                        <button class="button button5">Add to Cart</button>
                     </li>
                     <li class="hs__item">
                         <div class="hs__item__image__wrapper">
@@ -190,7 +190,7 @@
                         <div class="hs__item__description">
                             <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
                         </div>
-                        <button class="button button5">add to cart</button>
+                        <button class="button button5">Add to Cart</button>
                     </li>
                     <li class="hs__item">
                         <div class="hs__item__image__wrapper">
@@ -199,7 +199,7 @@
                         <div class="hs__item__description">
                             <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
                         </div>
-                        <button class="button button5">add to cart</button>
+                        <button class="button button5">Add to Cart</button>
                     </li>
                 </ul>
             </div>

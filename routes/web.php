@@ -35,3 +35,11 @@ Route::post('/login',[UserController::class,'store']);
 Route::post('/',[UserController::class,'authenticate']);
 
 Route::get('/logout',[UserController::class,'logout']);
+
+Route::get('/Homepage', function () {
+    return view('Homepage');
+});
+
+Route::get('/ProductDetail', function () {
+    return view('ProductDetail');
+});

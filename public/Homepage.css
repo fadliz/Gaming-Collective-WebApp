@@ -148,6 +148,7 @@ body {
 }
 .hs__arrows {
     align-self: center;
+    margin-right: 3%;
 }
 .hs__arrows .arrow:before {
     content: "";
@@ -259,7 +260,7 @@ body {
 .container {
     max-width: 990px;
     padding: calc(10px * 2);
-    background: #121212;
+    background: #1a1a1a;
     mix-blend-mode: invert;
     position: relative;
 }
@@ -280,35 +281,32 @@ body {
     }
 }
 
-
 ul {
     padding: 0;
     margin: 0;
 }
 
 .button {
-  background-color: #ffac42; 
-  border: none;
-  color: white;
-  padding: 10px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  border-radius: 20px;
+    background-color: #ffac42;
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 20px;
 }
 
 .button5 {
-  background-color: #ffac42;
-  color: black;
+    background-color: #ffac42;
+    color: black;
 }
 
 .button5:hover {
-  background-color: #ffac42;
-  color: white;
+    background-color: #ffac42;
+    color: white;
 }
-
-

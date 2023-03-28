@@ -1,0 +1,135 @@
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.content {
+    position: relative;
+    background: #1a1a1a;
+    color: #fffdfd;
+    min-height: 100vh;
+    top: 0;
+    left: 300px;
+    width: calc(100% - 300px);
+}
+
+.small-img-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-img-col {
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+.time-and-bid {
+    display: flex;
+}
+
+.time-and-bid p {
+    font-size: 18px;
+}
+
+.time-and-bid i {
+    font-size: 24px;
+    margin-right: 2px;
+}
+
+.time-and-bid span {
+    margin: 0px 6px;
+}
+
+.detail-item-harga {
+    font-weight: bold;
+    color: #ff2f2f;
+}
+
+.button-bid {
+    padding: 15px 230px;
+}
+
+.profile-section img {
+    margin-right: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.profile-section .username {
+    font-weight: bold;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #333333;
+    border-radius: 5px;
+    width: 30%;
+    transition: all 5s ease-in-out;
+    position: absolute;
+    float: left;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-weight: bold;
+}
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+.popup .close:hover {
+    color: #004aad;
+}
+.popup .content {
+    max-height: 30%;
+    overflow: auto;
+}
+
+.deskripsi-produk {
+    display: inline-block;
+    width: 625px;
+    overflow: hidden;
+}
+
+.back {
+    display: flex;
+    align-items: center;
+}
