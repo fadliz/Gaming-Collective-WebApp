@@ -28,7 +28,7 @@ Route::get('/login',function(){
 
 Route::get('/signup',function(){
     return view('SignUp');
-});
+})->name('login')->middleware('guest');
 
 Route::post('/login',[UserController::class,'store']);
 

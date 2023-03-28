@@ -19,13 +19,13 @@
     <body>
         <div class="sidebar">
             <div class="logo">
-                <a href="#"
+                <a href="/"
                     ><img src="/image/bakground/logo.png" alt=""
                 /></a>
             </div>
             <ul class="nav-links">
                 <li>
-                    <a href="#">
+                    <a href="/">
                         <i class="bx bx-home-alt"></i>
                         <span class="link_name">Home</span>
                     </a>
@@ -49,16 +49,18 @@
                     </a>
                 </li>
             </ul>
+            @auth
             <div class="sidebar-bottom">
                 <ul class="nav-links">
                     <li>
-                        <a href="#">
+                        <a href="/logout">
                             <i class="bx bx-log-out"></i>
                             <span class="link_name">Logout</span>
                         </a>
                     </li>
                 </ul>
             </div>
+            @endauth
         </div>
 
         <div class="content">

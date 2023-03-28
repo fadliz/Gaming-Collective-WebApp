@@ -45,8 +45,8 @@
 
     @guest
     <div class="box-button">
-        <a href="#" class="bn3637 bn37">Login</a>
-        <a href="#" class="bn3638 bn38">Sign Up</a>
+        <a href="/login" class="bn3637 bn37">Login</a>
+        <a href="/signup" class="bn3638 bn38">Sign Up</a>
       </div>
     @endguest
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
@@ -143,7 +143,7 @@
                 </li>
             </ul>
         </div>
-        <hr>
+        
         
         <div class="container">
             <div class="hs__wrapper">
