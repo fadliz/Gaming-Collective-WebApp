@@ -27,7 +27,11 @@
     <div class="profile p-5">
         <span>Welcome, {{auth()->user()->username}} !</span>
         <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="/image/gf image/fahri_GF_2.jpg" alt="" width="36" height="36" class="rounded-circle me-2" />
+            @if (auth()->user()->profile == null)
+                <img src="image/default.png" alt="" width="36" height="36" class="rounded-circle me-2" />
+            @else
+                <img src={{auth()->user()->profile}} alt="" width="36" height="36" class="rounded-circle me-2" />
+            @endif
         </a>
         <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
             <li>
@@ -49,6 +53,7 @@
         <a href="/signup" class="bn3638 bn38">Sign Up</a>
       </div>
     @endguest
+    
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
         <div class="carousel-indicators ">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -94,7 +99,7 @@
                     <div class="hs__item__description">
                         <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
                     </div>
-                    <button class="button button5">Add to Cart</button>
+                    <button class="button button5">add to cart</button>
                 </li>
                 <li class="hs__item">
                     <div class="hs__item__image__wrapper">
@@ -103,7 +108,7 @@
                     <div class="hs__item__description">
                         <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
                     </div>
-                    <button class="button button5">Add to Cart</button>
+                    <button class="button button5">add to cart</button>
                 </li>
                 <li class="hs__item">
                     <div class="hs__item__image__wrapper">
@@ -112,7 +117,7 @@
                     <div class="hs__item__description">
                         <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
                     </div>
-                    <button class="button button5">Add to Cart</button>
+                    <button class="button button5">add to cart</button>
                 </li>
                 <li class="hs__item">
                     <div class="hs__item__image__wrapper">
@@ -121,7 +126,7 @@
                     <div class="hs__item__description">
                         <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
                     </div>
-                    <button class="button button5">Add to Cart</button>
+                    <button class="button button5">add to cart</button>
                 </li>
                 <li class="hs__item">
                     <div class="hs__item__image__wrapper">
@@ -130,7 +135,7 @@
                     <div class="hs__item__description">
                         <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
                     </div>
-                    <button class="button button5">Add to Cart</button>
+                    <button class="button button5">add to cart</button>
                 </li>
                 <li class="hs__item">
                     <div class="hs__item__image__wrapper">
@@ -139,11 +144,11 @@
                     <div class="hs__item__description">
                         <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
                     </div>
-                    <button class="button button5">Add to Cart</button>
+                    <button class="button button5">add to cart</button>
                 </li>
             </ul>
         </div>
-        
+        <hr>
         
         <div class="container">
             <div class="hs__wrapper">
@@ -163,7 +168,7 @@
                         <div class="hs__item__description">
                             <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
                         </div>
-                        <button class="button button5">Add to Cart</button>
+                        <button class="button button5">add to cart</button>
                     </li>
                     <li class="hs__item">
                         <div class="hs__item__image__wrapper">
@@ -172,7 +177,7 @@
                         <div class="hs__item__description">
                             <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
                         </div>
-                        <button class="button button5">Add to Cart</button>
+                        <button class="button button5">add to cart</button>
                     </li>
                     <li class="hs__item">
                         <div class="hs__item__image__wrapper">
@@ -181,7 +186,7 @@
                         <div class="hs__item__description">
                             <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
                         </div>
-                        <button class="button button5">Add to Cart</button>
+                        <button class="button button5">add to cart</button>
                     </li>
                     <li class="hs__item">
                         <div class="hs__item__image__wrapper">
@@ -190,7 +195,7 @@
                         <div class="hs__item__description">
                             <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
                         </div>
-                        <button class="button button5">Add to Cart</button>
+                        <button class="button button5">add to cart</button>
                     </li>
                     <li class="hs__item">
                         <div class="hs__item__image__wrapper">
@@ -199,7 +204,7 @@
                         <div class="hs__item__description">
                             <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
                         </div>
-                        <button class="button button5">Add to Cart</button>
+                        <button class="button button5">add to cart</button>
                     </li>
                     <li class="hs__item">
                         <div class="hs__item__image__wrapper">
@@ -208,7 +213,7 @@
                         <div class="hs__item__description">
                             <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
                         </div>
-                        <button class="button button5">Add to Cart</button>
+                        <button class="button button5">add to cart</button>
                     </li>
                 </ul>
             </div>

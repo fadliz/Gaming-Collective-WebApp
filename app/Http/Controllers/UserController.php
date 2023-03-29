@@ -27,7 +27,9 @@ class UserController extends Controller
                 'name' => $validatedData['name'],
                 'email' => $validatedData['email'],
                 'password' => $validatedData['password'],
-                'username' => $validatedData['username']
+                'username' => $validatedData['username'],
+                'profile' => 'image/default.png',
+                'tipe' => 'user'
             ]);
 
             return redirect('/login')->with('success','Registration succesfull! please login!');
