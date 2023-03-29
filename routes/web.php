@@ -43,3 +43,7 @@ Route::get('/Homepage', function () {
 Route::get('/ProductDetail', function () {
     return view('ProductDetail');
 });
+
+Route::get('/Cart', function () {
+    return view('Cart');
+});
