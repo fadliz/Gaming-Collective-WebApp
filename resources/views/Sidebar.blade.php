@@ -31,7 +31,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/Cart">
                         <i class="bx bx-cart-alt"></i>
                         <span class="link_name">Cart</span>
                     </a>
