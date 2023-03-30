@@ -35,16 +35,42 @@
             </div>
             <div class="post-question py-5">
                 <div class="card">
-                    <h5 class="card-header">Featured</h5>
-                    <div class="card-body">
-                      <h5 class="card-title">Special title treatment</h5>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <div class="card-header">
+                        <img src="image/default.png" alt="" width="36" height="36" class="rounded-circle me-2" />
+                        syamaidzardn
                     </div>
-                  </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Ask a Question</label>
+                            <div class="input-group mb-3 mt-2">
+                                <label class="input-group-text" for="inputGroupSelect01">Category</label>
+                                <select class="form-select" id="inputGroupSelect01">
+                                  <option selected>Choose...</option>
+                                  <option value="1">Video games</option>
+                                  <option value="2">Gaming gear</option>
+                                  <option value="3">Other</option>
+                                </select>
+                              </div>
+                            <textarea class="form-control my-3" id="exampleFormControlTextarea1" rows="3" placeholder="Write the text here..."></textarea>
+                          </div>
+                      <a href="#" class="btn btn-primary btn-sm" type="button" value="Input">Add question</a>
+                    </div>
+                </div>
             </div>
-            
-        </div>
+            <hr>
+            <div class="question-list py-5">
+                <div class="card">
+                    <div class="card-header">
+                        <img src="image/default.png" alt="" width="36" height="36" class="rounded-circle me-2" />
+                        mughidaf
+                    </div>
+                    <div class="card-body">
+                        <span>Video games</span>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary btn-sm btn-outline-*">Reply question</a>
+                    </div>
+                </div>
+            </div>
         
 
         <script src="/forum.js" charset="utf-8"></script>

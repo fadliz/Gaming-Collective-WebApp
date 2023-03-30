@@ -47,7 +47,7 @@ body {
     align-items: center;
     display: flex;
     position: absolute;
-    right: 100px;
+    right: 45px;
 }
 
 .search-container i {
@@ -73,4 +73,24 @@ body {
     position: absolute;
     cursor: pointer;
     justify-content: center;
+}
+
+.card {
+    background-color: #333333 !important;
+    color: #fffdfd !important;
+}
+
+.card-header {
+    color: #fffdfd !important;
+}
+
+.card-body span {
+    font-size: 12px;
+    color: #aaa;
+}
+
+.btn {
+    background-color: #ffac42 !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
