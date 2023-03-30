@@ -59,6 +59,23 @@ button {
   margin: 20px;
 }
 
+
+a{
+  color: #7289da;
+}
+.register {
+  text-decoration: none;
+}
+
+.register:link {
+  color: #7289da;
+}
+
+.register:hover {
+  color: #7289da;
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 1000px) {
 	.form-container{
 		position: static;

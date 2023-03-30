@@ -148,76 +148,79 @@
                 </li>
             </ul>
         </div>
-        <hr>
-        
-        <div class="container">
-            <div class="hs__wrapper">
-                <div class="hs__header">
-                    <h2 class="hs__headline">List
-                    </h2>
-                    <div class="hs__arrows">
-                        <a class="arrow disabled arrow-prev"></a>
-                        <a class="arrow arrow-next"></a>
-                    </div>
-                </div>
-                <ul class="hs">
-                    <li class="hs__item">
-                        <div class="hs__item__image__wrapper">
-                            <img class="hs__item__image" src="/image/gf image/fahri_GF_1.jpg" alt="" />
-                        </div>
-                        <div class="hs__item__description">
-                            <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
-                        </div>
-                        <button class="button button5">add to cart</button>
-                    </li>
-                    <li class="hs__item">
-                        <div class="hs__item__image__wrapper">
-                            <img class="hs__item__image" src="/image/gf image/fahri_GF_2.jpg" alt="" />
-                        </div>
-                        <div class="hs__item__description">
-                            <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
-                        </div>
-                        <button class="button button5">add to cart</button>
-                    </li>
-                    <li class="hs__item">
-                        <div class="hs__item__image__wrapper">
-                            <img class="hs__item__image" src="/image/gf image/fahri_GF_3.jpg" alt="" />
-                        </div>
-                        <div class="hs__item__description">
-                            <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
-                        </div>
-                        <button class="button button5">add to cart</button>
-                    </li>
-                    <li class="hs__item">
-                        <div class="hs__item__image__wrapper">
-                            <img class="hs__item__image" src="/image/gf image/fahri_GF_4.webp" alt="" />
-                        </div>
-                        <div class="hs__item__description">
-                            <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
-                        </div>
-                        <button class="button button5">add to cart</button>
-                    </li>
-                    <li class="hs__item">
-                        <div class="hs__item__image__wrapper">
-                            <img class="hs__item__image" src="/image/gf image/fahri_GF_5.webp" alt="" />
-                        </div>
-                        <div class="hs__item__description">
-                            <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
-                        </div>
-                        <button class="button button5">add to cart</button>
-                    </li>
-                    <li class="hs__item">
-                        <div class="hs__item__image__wrapper">
-                            <img class="hs__item__image" src="/image/gf image/fahri_GF_6.webp" alt="" />
-                        </div>
-                        <div class="hs__item__description">
-                            <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
-                        </div>
-                        <button class="button button5">add to cart</button>
-                    </li>
-                </ul>
-            </div>
+    </div>
 
+    <hr>
+
+    <div class="container">
+        <div class="hs__wrapper">
+            <div class="hs__header">
+                <h2 class="hs__headline">List
+                </h2>
+                <div class="hs__arrows">
+                    <a class="arrow disabled arrow-prev"></a>
+                    <a class="arrow arrow-next"></a>
+                </div>
+            </div>
+            <ul class="hs">
+                <li class="hs__item">
+                    <div class="hs__item__image__wrapper">
+                        <img class="hs__item__image" src="/image/gf image/fahri_GF_1.jpg" alt="" />
+                    </div>
+                    <div class="hs__item__description">
+                        <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
+                    </div>
+                    <button class="button button5">add to cart</button>
+                </li>
+                <li class="hs__item">
+                    <div class="hs__item__image__wrapper">
+                        <img class="hs__item__image" src="/image/gf image/fahri_GF_2.jpg" alt="" />
+                    </div>
+                    <div class="hs__item__description">
+                        <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
+                    </div>
+                    <button class="button button5">add to cart</button>
+                </li>
+                <li class="hs__item">
+                    <div class="hs__item__image__wrapper">
+                        <img class="hs__item__image" src="/image/gf image/fahri_GF_3.jpg" alt="" />
+                    </div>
+                    <div class="hs__item__description">
+                        <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
+                    </div>
+                    <button class="button button5">add to cart</button>
+                </li>
+                <li class="hs__item">
+                    <div class="hs__item__image__wrapper">
+                        <img class="hs__item__image" src="/image/gf image/fahri_GF_4.webp" alt="" />
+                    </div>
+                    <div class="hs__item__description">
+                        <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
+                    </div>
+                    <button class="button button5">add to cart</button>
+                </li>
+                <li class="hs__item">
+                    <div class="hs__item__image__wrapper">
+                        <img class="hs__item__image" src="/image/gf image/fahri_GF_5.webp" alt="" />
+                    </div>
+                    <div class="hs__item__description">
+                        <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
+                    </div>
+                    <button class="button button5">add to cart</button>
+                </li>
+                <li class="hs__item">
+                    <div class="hs__item__image__wrapper">
+                        <img class="hs__item__image" src="/image/gf image/fahri_GF_6.webp" alt="" />
+                    </div>
+                    <div class="hs__item__description">
+                        <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
+                    </div>
+                    <button class="button button5">add to cart</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
 
         <script src="/homepage.js"></script>
         @endsection

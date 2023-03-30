@@ -14,6 +14,7 @@
             <label for="password">Password</label>
             <input type="password" id="password" name="password" placeholder="Password" />
             <button>Login</button>
+            <p>Need an account? <a class="register" href="/signup">Register</a></p>
           </form>
         </div>
     </div>        
