@@ -47,3 +47,7 @@ Route::get('/ProductDetail', function () {
 Route::get('/Cart', function () {
     return view('Cart');
 });
+
+Route::get('/Forum', function () {
+    return view('Forum');
+});
