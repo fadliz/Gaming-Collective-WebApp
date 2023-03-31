@@ -87,18 +87,6 @@ body {
     align-items: center;
 }
 
-.dropdown {
-    position: absolute;
-    top: 0px;
-    right: 0;
-}
-
-.dropdown i {
-    text-decoration: none;
-    color: #fffdfd;
-    font-size: 16px;
-}
-
 .card-body span {
     font-size: 12px;
     color: #aaa;
@@ -142,7 +130,7 @@ a.button3:hover {
 button {
     font-size: 14px;
     padding: 4px 8px;
-    background-color: #ffac42;
+    background-color: 
     color: #fffdfd;
     border-radius: 10px;
 }
@@ -152,6 +140,20 @@ button:active {
     cursor: pointer;
     background-color: #ffac42;
 }
+
+button[data-toggle="reply-form"] {
+    border-radius: 10px; /* Change the value to adjust the radius */
+    padding: 6px 14px; /* Change the value to adjust the padding */
+    background-color: #ffac42; /* Change the color to your preference */
+    color: #fffdfd; /* Change the color to your preference */
+    border: none;
+    cursor: pointer;
+}
+
+button[data-toggle="reply-form"]:hover {
+    background-color: #3e8e41; /* Change the color to your preference */
+}
+
 .comment-thread {
     width: 100%;
     max-width: 100%;
@@ -179,17 +181,31 @@ button:active {
     position: relative;
     margin: 20px auto;
 }
+
 .comment-heading {
-    display: flex;
     align-items: center;
     height: 50px;
     font-size: 14px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropdown {
+    margin-left: auto;
+}
+
+.dropdown i {
+    text-decoration: none;
+    color: #fffdfd;
+    font-size: 16px;
 }
 
 .comment-info {
     color: #fffdfd;
-    margin-left: 10px;
+    margin-right: auto;
 }
+
 .comment-author {
     color: #fffdfd;
     font-weight: bold;
@@ -220,7 +236,7 @@ button:active {
 }
 .comment-body {
     padding: 0 20px;
-    padding-left: 28px;
+    padding-left: 45px;
 }
 .replies {
     margin-left: 28px;

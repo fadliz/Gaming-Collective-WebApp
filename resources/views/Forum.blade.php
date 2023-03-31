@@ -59,7 +59,7 @@
             </div>
             <hr>
             <div class="question-list py-5">
-                <div class="comment-thread">
+                <div class="comment-thread mb-3">
                     <!-- Comment 1 start -->
                     <div class="comment" id="comment-1">
                         <a href="#comment-1" class="comment-border-link">
@@ -76,6 +76,94 @@
                                 </p>
                             </div>
                         </div>
+                        <div class="comment-body">
+                            <p>
+                                This is really great! I fully agree with what you wrote, and this is sure to help me out in the future. Thank you for posting this.
+                            </p>
+                            <button type="button" data-toggle="reply-form" data-target="comment-1-reply-form">Reply</button>
+                            
+                
+                            <!-- Reply form start -->
+                            <form method="POST" class="reply-form d-none" id="comment-1-reply-form">
+                                <textarea placeholder="Reply to comment" rows="4"></textarea>
+                                <button type="submit">Submit</button>
+                                <button type="button" data-toggle="reply-form" data-target="comment-1-reply-form">Cancel</button>
+                            </form>
+                            <!-- Reply form end -->
+                        </div>
+                
+                        <div class="replies">
+                            <!-- Comment 2 start -->
+                            <details open class="comment" id="comment-2">
+                                <a href="#comment-2" class="comment-border-link">
+                                    <span class="sr-only">Jump to comment-2</span>
+                                </a>
+                                <summary>
+                                    <div class="comment-heading">
+                                        <div class="card-header">
+                                            <img src="image/default.png" alt="" width="36" height="36" class="rounded-circle me-2" />
+                                        </div>
+                                        <div class="comment-info">
+                                            <a href="#" class="comment-author">randomperson81</a>
+                                            <p class="m-0">
+                                                Video games &bull; 3 days ago
+                                            </p>
+                                        </div>
+                                    </div>
+                                </summary>
+                
+                                <div class="comment-body">
+                                    <p>
+                                        Took the words right out of my mouth!
+                                    </p>
+                                    <button type="button" data-toggle="reply-form" data-target="comment-2-reply-form">Reply</button>
+                                    
+                
+                                    <!-- Reply form start -->
+                                    <form method="POST" class="reply-form d-none" id="comment-2-reply-form">
+                                        <textarea placeholder="Reply to comment" rows="4"></textarea>
+                                        <button type="submit">Submit</button>
+                                        <button type="button" data-toggle="reply-form" data-target="comment-2-reply-form">Cancel</button>
+                                    </form>
+                                    <!-- Reply form end -->
+                                </div>
+                            </details>
+                            <!-- Comment 2 end -->
+                
+                            <a href="#load-more">Load more replies</a>
+                        </div>
+                    </div>
+                    <!-- Comment 1 end -->
+                </div>
+
+                <div class="comment-thread">
+                    <!-- Comment 1 start -->
+                    <div class="comment" id="comment-1">
+                        <a href="#comment-1" class="comment-border-link">
+                            <span class="sr-only">Jump to comment-1</span>
+                        </a>
+                        <div class="comment-heading">
+                            <div class="card-header">
+                                <img src="image/default.png" alt="" width="36" height="36" class="rounded-circle ms me-2" />
+                               
+                            </div>
+                            <div class="comment-info">
+                                <a href="#" class="comment-author">syamaidzardn</a>
+                                
+                                <p class="m-0">
+                                    Video games &bull; 4 days ago
+                                </p>
+                            
+                            </div>
+                            <a class="dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class='bx bx-dots-vertical-rounded' style='font-size: 16px; float: right; width: 100%;'></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Edit post</a></li>
+                              <li><a class="dropdown-item" href="#" style="color : #ff1f57;">Delete post</a></li>
+                            </ul>
+                        </div>
+                        
                         <div class="comment-body">
                             <p>
                                 This is really great! I fully agree with what you wrote, and this is sure to help me out in the future. Thank you for posting this.
