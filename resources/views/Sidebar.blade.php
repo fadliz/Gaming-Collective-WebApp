@@ -43,7 +43,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/Forum">
                         <i class="bx bx-chat"></i>
                         <span class="link_name">Forum</span>
                     </a>
