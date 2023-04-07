@@ -52,3 +52,6 @@ Route::get('/Forum', function () {
     return view('Forum');
 });
 
+Route::get('/Category', function () {
+    return view('Category');
+});
