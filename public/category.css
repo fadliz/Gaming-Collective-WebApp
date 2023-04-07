@@ -51,6 +51,7 @@ body {
     -ms-overflow-style: none;
     -webkit-overflow-scrolling: touch;
     margin: 0 -20px;
+    margin-right: 10px;
 }
 .hs__header {
     display: flex;
