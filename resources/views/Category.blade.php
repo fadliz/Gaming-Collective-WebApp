@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="/ProductDetail.css" rel="stylesheet" />
+    <link href="/category.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
@@ -43,7 +43,7 @@
                     <div class="card-header">Filter</div>
                     <div class="card-body p-1">
                         <div class="card border-0 b-3">
-                            <div class="card-header p-2 bg-white" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false">
+                            <div class="card-header p-2" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false">
                                 <p class="m-0 h6">Brand</p>
                             </div>
                             <div class="card-body p-0 collapse show" id="collapseExample1">
@@ -129,7 +129,7 @@
                             </div>
                         </div>
                         <div class="card border-0 b-3">
-                            <div class="card-header p-2 bg-white" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false">
+                            <div class="card-header p-2" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false">
                                 <p class="m-0 h6">Price</p>
                             </div>
                             <div class="card-body p collapse show" id="collapseExample4">
@@ -155,16 +155,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="row">
-                            <div class="col-md-5">
-                                <div class="btn-group" role="group">
-                                    <button type="button" class="btn btn-secondary active"><i class="fas fa-th"></i></button>
-                                    <button type="button" class="btn btn-secondary"><i class="fas fa-th-list"></i></button>
-                                    <button type="button" class="btn btn-secondary">
-                                        <i class="fas fa-sync-alt"></i>
-                                        <span>Product Compare (0)</span>
-                                    </button>
-                                </div>
-                            </div>
+                            
                             <div class="col-md-4">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
@@ -199,17 +190,66 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card-body">
+                <div class="card-body">
         <div class="row">
             <div class="hs__wrapper">
-                <div class="hs__header">
-                    <h2 class="hs__headline">List
-                    </h2>
-                    <div class="hs__arrows">
-                        <a class="arrow disabled arrow-prev"></a>
-                        <a class="arrow arrow-next"></a>
-                    </div>
-                </div>
+                
+                <ul class="hs">
+                    <li class="hs__item">
+                        <div class="hs__item__image__wrapper">
+                            <img class="hs__item__image" src="/image/gf image/fahri_GF_1.jpg" alt="" />
+                        </div>
+                        <div class="hs__item__description">
+                            <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
+                        </div>
+                        <button class="button button5">add to cart</button>
+                    </li>
+                    <li class="hs__item">
+                        <div class="hs__item__image__wrapper">
+                            <img class="hs__item__image" src="/image/gf image/fahri_GF_2.jpg" alt="" />
+                        </div>
+                        <div class="hs__item__description">
+                            <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
+                        </div>
+                        <button class="button button5">add to cart</button>
+                    </li>
+                    <li class="hs__item">
+                        <div class="hs__item__image__wrapper">
+                            <img class="hs__item__image" src="/image/gf image/fahri_GF_3.jpg" alt="" />
+                        </div>
+                        <div class="hs__item__description">
+                            <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
+                        </div>
+                        <button class="button button5">add to cart</button>
+                    </li>
+                    <li class="hs__item">
+                        <div class="hs__item__image__wrapper">
+                            <img class="hs__item__image" src="/image/gf image/fahri_GF_4.webp" alt="" />
+                        </div>
+                        <div class="hs__item__description">
+                            <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
+                        </div>
+                        <button class="button button5">add to cart</button>
+                    </li>
+                    <li class="hs__item">
+                        <div class="hs__item__image__wrapper">
+                            <img class="hs__item__image" src="/image/gf image/fahri_GF_5.webp" alt="" />
+                        </div>
+                        <div class="hs__item__description">
+                            <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
+                        </div>
+                        <button class="button button5">add to cart</button>
+                    </li>
+                    <li class="hs__item">
+                        <div class="hs__item__image__wrapper">
+                            <img class="hs__item__image" src="/image/gf image/fahri_GF_6.webp" alt="" />
+                        </div>
+                        <div class="hs__item__description">
+                            <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
+                        </div>
+                        <button class="button button5">add to cart</button>
+                    </li>
+                </ul>
                 <ul class="hs">
                     <li class="hs__item">
                         <div class="hs__item__image__wrapper">
@@ -273,7 +313,8 @@
                             <div class="col-md-6">
                                 <ul class="pagination m-0">
                                     <li class="page-item disabled">
-                                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                        <a class="page-link" style="background-color: #1a1a1a !important;
+                                        color: #fffdfd !important;" href="#" tabindex="-1" aria-disabled="true">Previous</a>
                                     </li>
                                     <li class="page-item"><a class="page-link" href="#">1</a></li>
                                     <li class="page-item"><a class="page-link" href="#">2</a></li>
@@ -301,7 +342,7 @@
         <div class="row"></div>
     </div>
     
-    <script src="/ProductDetail.js" charset="utf-8"></script>
+    <script src="/category.js" charset="utf-8"></script>
       
     @endsection
 
