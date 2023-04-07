@@ -51,3 +51,7 @@ Route::get('/Cart', function () {
 Route::get('/Forum', function () {
     return view('Forum');
 });
+
+Route::get('/', function () {
+    return view('ProfilePage');
+});
