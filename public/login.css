@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 * {
   box-sizing: border-box;
+  color: white;
 }
 body {
   margin: 0;
@@ -9,6 +10,7 @@ body {
   background-size: cover;
   width: 66%;
   font-family: 'Montserrat', sans-serif;
+  color: white;
 }
 
 .container {

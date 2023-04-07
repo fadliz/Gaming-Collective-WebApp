@@ -52,6 +52,3 @@ Route::get('/Forum', function () {
     return view('Forum');
 });
 
-Route::get('/', function () {
-    return view('ProfilePage');
-});
