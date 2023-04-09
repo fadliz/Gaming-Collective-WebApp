@@ -63,6 +63,16 @@
             </form>
             <hr>
             @foreach ($post as $item)
+            <!-- Reply form start -->
+            <form action="/reply" method="POST" class="reply-form d-none" id="comment-1-reply-form">
+                @csrf
+                <input name="userid" id="userid" type="hidden" value="{{auth()->user()->id}}">
+                <input name="postid" id="postid" type="hidden" value="{{$item->id}}">
+                <textarea name="reply" id="reply" placeholder="Reply to comment" rows="4"></textarea>
+                <button type="submit">Submit</button>
+                <button type="button" data-toggle="reply-form" data-target="comment-1-reply-form">Cancel</button>
+            </form>
+            <!-- Reply form end -->
             
             <div class="question-list py-5">
                 <div class="comment-thread mb-3">
@@ -95,19 +105,10 @@
                             <p>
                                 {{$item->question}}
                             </p>
-                            <button type="button" data-toggle="reply-form" data-target="comment-1-reply-form">Reply</button>
+                            <button onclick="topFunction()" type="button" data-toggle="reply-form" data-target="comment-1-reply-form">Reply</button>
                             
                 
-                            <!-- Reply form start -->
-                            <form action="/reply" method="POST" class="reply-form d-none" id="comment-1-reply-form">
-                                @csrf
-                                <input name="userid" id="userid" type="hidden" value="{{auth()->user()->id}}">
-                                <input name="postid" id="postid" type="hidden" value="{{$item->id}}">
-                                <textarea name="reply" id="reply" placeholder="Reply to comment" rows="4"></textarea>
-                                <button type="submit">Submit</button>
-                                <button type="button" data-toggle="reply-form" data-target="comment-1-reply-form">Cancel</button>
-                            </form>
-                            <!-- Reply form end -->
+                            
                         </div>
                         @foreach ($item->replies as $bales)
                             
@@ -159,7 +160,24 @@
 
             @endforeach
         
-
+            <script>
+                // Ketika pengguna menggulir ke bawah 20px dari atas dokumen, tombol akan muncul
+                window.onscroll = function() {scrollFunction()};
+                
+                function scrollFunction() {
+                  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("myBtn").style.display = "block";
+                  } else {
+                    document.getElementById("myBtn").style.display = "none";
+                  }
+                }
+                
+                // Ketika pengguna mengklik tombol, gulir ke atas
+                function topFunction() {
+                  document.body.scrollTop = 0; // Untuk Safari
+                  document.documentElement.scrollTop = 0; // Untuk Chrome, Firefox, IE dan Opera
+                }
+                </script>
         <script src="/forum.js" charset="utf-8"></script>
     @endsection
 
