@@ -33,9 +33,9 @@
                                 <div class="col-md-4">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text">Category:</span>
+                                            <span class="input-group-text border-0">Category:</span>
                                         </div>
-                                        <select class="form-control" id="" name="">
+                                        <select class="form-control border-0" id="" name="">
                                             <option value="">Android</option>
                                             <option value="">Camera (A - Z)</option>
                                             <option value="">PC (A - Z)</option>
@@ -51,9 +51,9 @@
                                 <div class="col-md-3">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text">Show:</span>
+                                            <span class="input-group-text border-0">Show:</span>
                                         </div>
-                                        <select class="form-control" id="" name="">
+                                        <select class="form-control border-0" id="" name="">
                                             <option value="">10</option>
                                             <option value="">20</option>
                                             <option value="">50</option>
@@ -210,17 +210,17 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <ul class="pagination m-0">
-                                            <li class="page-item disabled">
-                                                <a class="page-link"
+                                            <li class="page-item disabled border-0">
+                                                <a class="page-link border-0"
                                                     style="background-color: #1a1a1a !important;
                                         color: #fffdfd !important;"
                                                     href="#" tabindex="-1" aria-disabled="true">Previous</a>
                                             </li>
-                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item"><a class="page-link border-0" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link border-0" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link border-0" href="#">3</a></li>
                                             <li class="page-item">
-                                                <a class="page-link" href="#">Next</a>
+                                                <a class="page-link border-0" href="#">Next</a>
                                             </li>
                                         </ul>
                                     </div>
