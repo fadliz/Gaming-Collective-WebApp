@@ -72,4 +72,14 @@ Route::get('/AdminAddProduct', function () {
 });
 
 Route::post('/Forum',[ForumController::class,'store']);
+
 Route::post('/reply',[ReplyController::class,'store']);
+
+Route::get('/adminDashboard',function () {
+    return view('admin.dashboard');
+});
+
+Route::get('/products',function () {
+    return view('admin.product');
+});
+

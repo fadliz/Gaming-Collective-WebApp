@@ -48,11 +48,20 @@ class UserController extends Controller
         if(Auth::attempt($credentials)){
             $request->session()->regenerate();
 
-            return redirect()->intended('homepage');
+
+            $cek = User::where('username', $credentials['username'])->first();
+        
+            if($cek->tipe == 'admin'){
+                return redirect()->intended('/adminDashboard');
+            } else{
+                return redirect()->intended('homepage');
+            }
 
         }
+
         
-        return view('login');
+        
+        return back()->with('loginError', 'Login Failed!');
     }
 
     public function logout(Request $request){
