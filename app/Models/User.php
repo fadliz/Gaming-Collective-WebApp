@@ -48,4 +48,8 @@ class User extends Authenticatable
     public function Forums(){
         return $this->hasMany(Forum::class);
     }
+
+    public function replies(){
+        return $this->hasMany(reply::class);
+    }
 }

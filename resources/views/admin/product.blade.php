@@ -22,7 +22,7 @@
                 
             <tr>
               <td>{{$loop->iteration}}</td>
-              <td><img src="{{$item->image}}" height="100" alt=""></td>
+              <td><img src="storage/{{$item->image}}" height="100" alt=""></td>
               <td>{{$item->name}}</td>
               <td>{{$item->Category->nama}}</td>
               <td>{{$item->price}}</td>

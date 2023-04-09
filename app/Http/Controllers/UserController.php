@@ -93,7 +93,7 @@ class UserController extends Controller
         }
         else{
             User::where('id',$orang->id)->update([
-                'name' => $request->nama,
+                'name' => $request->name,
                 'email' => $request->email
             ]);
         }

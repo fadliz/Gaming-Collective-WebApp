@@ -28,7 +28,7 @@
     <label for="description">Deskripsi Produk</label>
     <textarea class="form-control my-3" name="description" id="description" rows="3" placeholder="Write the text here..."></textarea>
     <label for="image">Tambah Gambar</label>
-    <input class="form-control" type="file" id="formFileMultiple" multiple />
+    <input name="image" id="image" class="form-control" type="file" id="formFileMultiple" multiple />
     <button type="submit" href="" class="btn btn-primary btn-md mt-5"> Add Product</button>
     <a href="{{ url('/items') }}" class="btn btn-outline-danger btn-md mt-5"> Cancel</a>
   </div>

@@ -85,7 +85,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>Name</label>
-                                        <input value ="{{old('name',auth()->user()->nama)}}" name="nama" id="nama" type="text" class="form-control" placeholder="{{auth()->user()->name}}">
+                                        <input value ="{{old('name',auth()->user()->nama)}}" name="name" id="name" type="text" class="form-control" placeholder="{{auth()->user()->name}}">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -98,6 +98,7 @@
                         
                             <div>
                                 <button class="btn btn-primary">Update</button>
+                        </form>
                                 <button class="btn btn-light">Cancel</button>
                             </div>
                         </div>
