@@ -87,6 +87,14 @@ Route::get('/AdminEditCategory', function () {
     return view('/admin/editcategory');
 });
 
+Route::get('/Wishlist', function () {
+    return view('Wishlist');
+});
+
+Route::get('/HistoryPembelian', function () {
+    return view('HistoryPembelian');
+});
+
 Route::post('/Forum',[ForumController::class,'store']);
 
 Route::post('/reply',[ReplyController::class,'store']);
