@@ -27,13 +27,11 @@
             <div class="top-forum">
                 <h3 style='font-weight : 700;'>Edit Forum</h3>
             </div>
-            <form action="/Forum" method="post">
+            <form action="/editingForum/{{$post->id}}" method="post">
                 @csrf
                 <div class="post-question py-5">
                     <div class="card">
-                        <div class="card-header">
-                            <img src="image/default.png" alt="" width="36" height="36" class="rounded-circle me-2" />
-                        </div>
+                        
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="exampleFormControlTextarea1">Edit Question</label>
@@ -41,20 +39,21 @@
                                     <input name="userid" id="userid" type="hidden" value="{{auth()->user()->id}}">
                                     <label class="input-group-text" for="inputGroupSelect01">Category</label>
                                     <select class="form-select" id="kategori" name="kategori">
-                                    <option selected>Choose...</option>
+                                    <option selected value="{{$post->Category->id}}">{{$post->Category->nama}}</option>
                                     <option value="1">Video games</option>
                                     <option value="2">Gaming gear</option>
                                     <option value="3">Other</option>
                                     </select>
                                 </div>
-                                <textarea class="form-control my-3" id="question" name="question" rows="3" placeholder="Write the text here..."></textarea>
+                                <textarea class="form-control my-3" id="question" name="question" rows="3">{{old('question',$post->question)}}</textarea>
                             </div>
-                            <a href="/Forum"><button class="button button5" type="submit">Edit Post</button></a>
-                            <a href="/Forum"><button class="button button5">Cancel</button></a>
+                            <button type="submit">Submit</button>
+                            
                         </div>
                     </div>
                 </div>
             </form>
+            <a href="/Forum"><button class="button button5">Cancel</button></a>
         
 
         <script src="/forum.js" charset="utf-8"></script>

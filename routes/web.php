@@ -117,7 +117,18 @@ Route::get('/Profile',function(){
 });
 
 Route::post('/change-profile-pic/{id}',[UserController::class,'editProfilepPic']);
+
+Route::post('/editNama/{id}',[UserController::class,'editNama']);
+
 Route::resource('items', ItemController::class);
+
+Route::get('/editForum/{id}',function($id) {
+    return view('EditForum',['post'=>Forum::find($id)]);
+});
+
+Route::get('/hapusForum/{id}',[ForumController::class,'destroy']);
+
+Route::post('editingForum/{id}',[ForumController::class,'edit']);
 
 Route::get('/products', [ItemController::class, 'index']);
 

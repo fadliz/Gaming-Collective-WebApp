@@ -51,9 +51,15 @@ class ForumController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Forum $forum)
+    public function edit(Request $request,$id)
     {
-        //
+        $post = Forum::find($id);
+        Forum::where('id',$post->id)->update([
+            'Category_id' => $request->kategori,
+            'question' => $request->question
+        ]);
+
+        return redirect('/Forum');
     }
 
     /**
@@ -67,8 +73,14 @@ class ForumController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Forum $forum)
+    public function destroy($id)
     {
-        //
+        $post = Forum::find($id);
+        foreach($post->replies as $item){
+            $item->delete();
+        }
+
+        $post->delete();
+        return redirect('/Forum');
     }
 }

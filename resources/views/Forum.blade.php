@@ -96,8 +96,8 @@
                                 <i class='bx bx-dots-vertical-rounded' style='font-size: 16px; float: right; width: 100%;'></i>
                             </a>
                             <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#">Edit post</a></li>
-                              <li><a class="dropdown-item" href="#" style="color : #ff1f57;">Delete post</a></li>
+                              <li><a class="dropdown-item" href="/editForum/{{$item->id}}">Edit post</a></li>
+                              <li><a class="dropdown-item" href="/hapusForum/{{$item->id}}" style="color : #ff1f57;">Delete post</a></li>
                             </ul>
                             @endif
                         </div>

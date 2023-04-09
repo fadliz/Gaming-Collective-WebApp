@@ -83,4 +83,21 @@ class UserController extends Controller
 
         return redirect('/Profile');
     }
+
+    public function editNama(Request $request,$id){
+        $orang = User::find($id);
+        if($request->name == null){
+            User::where('id',$orang->id)->update([
+                'email' => $request->email
+            ]);
+        }
+        else{
+            User::where('id',$orang->id)->update([
+                'name' => $request->nama,
+                'email' => $request->email
+            ]);
+        }
+
+        return redirect('/Profile');
+    }
 }

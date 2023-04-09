@@ -79,22 +79,25 @@
                         <div class="tab-pane fade show active" id="account" role="tabpanel"
                             aria-labelledby="account-tab">
                             <h3 class="mb-4">Account Detail</h3>
+                        <form action="/editNama/{{auth()->user()->id}}" method="POST">
+                            @csrf
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>Name</label>
-                                        <input type="text" class="form-control" placeholder="{{auth()->user()->name}}">
+                                        <input value ="{{old('name',auth()->user()->nama)}}" name="nama" id="nama" type="text" class="form-control" placeholder="{{auth()->user()->name}}">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>Email</label>
-                                        <input type="email" class="form-control" placeholder="{{auth()->user()->email}}">
+                                        <input value ="{{old('email',auth()->user()->email)}}" name="email" id="email" type="email" class="form-control" placeholder="{{auth()->user()->email}}">
                                     </div>
                                 </div>
                             </div>
+                        
                             <div>
-                                <button class="btn btn-primary border-0" style="background-color : #ffac42 !important;">Update</button>
+                                <button class="btn btn-primary">Update</button>
                                 <button class="btn btn-light">Cancel</button>
                             </div>
                         </div>
