@@ -37,7 +37,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/Category">
                         <i class="bx bx-grid-alt"></i>
                         <span class="link_name">Category</span>
                     </a>

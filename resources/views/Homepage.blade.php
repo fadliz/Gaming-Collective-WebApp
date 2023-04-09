@@ -30,7 +30,7 @@
             @if (auth()->user()->profile == null)
                 <img src="image/default.png" alt="" width="36" height="36" class="rounded-circle me-2" />
             @else
-                <img src={{auth()->user()->profile}} alt="" width="36" height="36" class="rounded-circle me-2" />
+                <img src='storage/{{auth()->user()->profile}}' alt="" width="36" height="36" class="rounded-circle me-2" />
             @endif
         </a>
         <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
