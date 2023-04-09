@@ -55,3 +55,15 @@ Route::get('/Forum', function () {
 Route::get('/Category', function () {
     return view('Category');
 });
+
+Route::get('/Admin', function () {
+    return view('/admin/dashboard');
+});
+
+Route::get('/AdminProduct', function () {
+    return view('/admin/product');
+});
+
+Route::get('/AdminAddProduct', function () {
+    return view('/admin/addproduct');
+});
