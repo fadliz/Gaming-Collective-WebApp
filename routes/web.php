@@ -95,6 +95,10 @@ Route::get('/HistoryPembelian', function () {
     return view('HistoryPembelian');
 });
 
+Route::get('/Checkout', function () {
+    return view('Checkout');
+});
+
 Route::post('/Forum',[ForumController::class,'store']);
 
 Route::post('/reply',[ReplyController::class,'store']);

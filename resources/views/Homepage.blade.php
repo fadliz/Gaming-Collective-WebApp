@@ -41,10 +41,10 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
                     <li>
-                        <a class="dropdown-item" href="#">Profile</a>
+                        <a class="dropdown-item" href="/Profile">Profile</a>
                     </li>
-                    <li><a class="dropdown-item" href="#">Whishlist</a></li>
-                    <li><a class="dropdown-item" href="/Profile">Payment History</a></li>
+                    <li><a class="dropdown-item" href="/Wishlist">Wishlist</a></li>
+                    <li><a class="dropdown-item" href="/HistoryPembelian">Payment History</a></li>
                     <li>
                         <hr class="dropdown-divider" />
                     </li>

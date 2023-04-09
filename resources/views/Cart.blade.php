@@ -53,7 +53,7 @@
                 <span>Rp3.000,00</span>
             </div>
             <div class="box-button">
-                <a href="#" class="bn3637 bn37">Checkout</a>
+                <a href="/Checkout" class="bn3637 bn37">Checkout</a>
         </div>
         <script src="/cart.js" charset="utf-8"></script>
     @endsection
