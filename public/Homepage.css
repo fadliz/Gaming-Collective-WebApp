@@ -385,7 +385,8 @@ body {
     transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
 }
 
-.products-preview .preview {
+
+/* .products-preview .preview {
     display: none;
     padding: 2rem;
     text-align: center;
@@ -475,4 +476,4 @@ body {
 .products-preview .preview .buttons a.buy:hover {
     background: #444;
     color: #fff;
-}
+} */

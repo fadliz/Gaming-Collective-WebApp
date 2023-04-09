@@ -112,7 +112,7 @@
                         </div>
                         <button class="button button5">add to cart</button>
                     </li>
-                    <li class="hs__item"  data-name="p-2">
+                    <li class="hs__item" data-name="p-2">
                         <div class="hs__item__image__wrapper">
                             <img class="hs__item__image" src="/image/gf image/fahri_GF_2.jpg" alt="" />
                         </div>
@@ -161,7 +161,7 @@
             </div>
         </div>
 
-        <div class="products-preview">
+        {{-- <div class="products-preview">
             <div class="preview" data-target="p-1">
                 <i class="fas fa-times"></i>
                 <img src="/image/gf image/fahri_GF_5.webp" alt="">
@@ -182,7 +182,7 @@
                     <a href="#" class="cart">add to cart</a>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
         <hr>
 
