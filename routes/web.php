@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\ForumController;
+use App\Http\Controllers\ReplyController;
 use App\Http\Controllers\UserController;
+use App\Models\Forum;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,7 +31,7 @@ Route::get('/login',function(){
 
 Route::get('/signup',function(){
     return view('SignUp');
-})->name('login')->middleware('guest');
+})->middleware('guest');
 
 Route::post('/login',[UserController::class,'store']);
 
@@ -49,7 +52,7 @@ Route::get('/Cart', function () {
 });
 
 Route::get('/Forum', function () {
-    return view('Forum');
+    return view('Forum',['post' => Forum::all()]);
 });
 
 Route::get('/Category', function () {
@@ -67,3 +70,6 @@ Route::get('/AdminProduct', function () {
 Route::get('/AdminAddProduct', function () {
     return view('/admin/addproduct');
 });
+
+Route::post('/Forum',[ForumController::class,'store']);
+Route::post('/reply',[ReplyController::class,'store']);

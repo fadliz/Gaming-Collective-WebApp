@@ -33,31 +33,37 @@
                     </button>
                 </div>
             </div>
-            <div class="post-question py-5">
-                <div class="card">
-                    <div class="card-header">
-                        <img src="image/default.png" alt="" width="36" height="36" class="rounded-circle me-2" />
-                        syamaidzardn
-                    </div>
-                    <div class="card-body">
-                        <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Ask a Question</label>
-                            <div class="input-group mb-3 mt-2">
-                                <label class="input-group-text" for="inputGroupSelect01">Category</label>
-                                <select class="form-select" id="inputGroupSelect01">
-                                  <option selected>Choose...</option>
-                                  <option value="1">Video games</option>
-                                  <option value="2">Gaming gear</option>
-                                  <option value="3">Other</option>
-                                </select>
-                              </div>
-                            <textarea class="form-control my-3" id="exampleFormControlTextarea1" rows="3" placeholder="Write the text here..."></textarea>
-                          </div>
-                          <a href="" class="button3" >Add question</a>
+            <form action="/Forum" method="post">
+                @csrf
+                <div class="post-question py-5">
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="image/default.png" alt="" width="36" height="36" class="rounded-circle me-2" />
+                            {{auth()->user()->username}}
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Ask a Question</label>
+                                <div class="input-group mb-3 mt-2">
+                                    <input name="userid" id="userid" type="hidden" value="{{auth()->user()->id}}">
+                                    <label class="input-group-text" for="inputGroupSelect01">Category</label>
+                                    <select class="form-select" id="kategori" name="kategori">
+                                    <option selected>Choose...</option>
+                                    <option value="1">Video games</option>
+                                    <option value="2">Gaming gear</option>
+                                    <option value="3">Other</option>
+                                    </select>
+                                </div>
+                                <textarea class="form-control my-3" id="question" name="question" rows="3" placeholder="Write the text here..."></textarea>
+                            </div>
+                            <input type="submit" value="Add Question">
+                        </div>
                     </div>
                 </div>
-            </div>
+            </form>
             <hr>
+            @foreach ($post as $item)
+            
             <div class="question-list py-5">
                 <div class="comment-thread mb-3">
                     <!-- Comment 1 start -->
@@ -70,91 +76,12 @@
                                 <img src="image/default.png" alt="" width="36" height="36" class="rounded-circle me-2" />
                             </div>
                             <div class="comment-info">
-                                <a href="#" class="comment-author">someguy14</a>
+                                <a href="#" class="comment-author">{{$item->User->username}}</a>
                                 <p class="m-0">
-                                    Video games &bull; 4 days ago
+                                    {{$item->Category->nama}} &bull; {{ \Carbon\Carbon::parse($item->created_at)->diffForHumans() }}
                                 </p>
                             </div>
-                        </div>
-                        <div class="comment-body">
-                            <p>
-                                This is really great! I fully agree with what you wrote, and this is sure to help me out in the future. Thank you for posting this.
-                            </p>
-                            <button type="button" data-toggle="reply-form" data-target="comment-1-reply-form">Reply</button>
-                            
-                
-                            <!-- Reply form start -->
-                            <form method="POST" class="reply-form d-none" id="comment-1-reply-form">
-                                <textarea placeholder="Reply to comment" rows="4"></textarea>
-                                <button type="submit">Submit</button>
-                                <button type="button" data-toggle="reply-form" data-target="comment-1-reply-form">Cancel</button>
-                            </form>
-                            <!-- Reply form end -->
-                        </div>
-                
-                        <div class="replies">
-                            <!-- Comment 2 start -->
-                            <details open class="comment" id="comment-2">
-                                <a href="#comment-2" class="comment-border-link">
-                                    <span class="sr-only">Jump to comment-2</span>
-                                </a>
-                                <summary>
-                                    <div class="comment-heading">
-                                        <div class="card-header">
-                                            <img src="image/default.png" alt="" width="36" height="36" class="rounded-circle me-2" />
-                                        </div>
-                                        <div class="comment-info">
-                                            <a href="#" class="comment-author">randomperson81</a>
-                                            <p class="m-0">
-                                                Video games &bull; 3 days ago
-                                            </p>
-                                        </div>
-                                    </div>
-                                </summary>
-                
-                                <div class="comment-body">
-                                    <p>
-                                        Took the words right out of my mouth!
-                                    </p>
-                                    <button type="button" data-toggle="reply-form" data-target="comment-2-reply-form">Reply</button>
-                                    
-                
-                                    <!-- Reply form start -->
-                                    <form method="POST" class="reply-form d-none" id="comment-2-reply-form">
-                                        <textarea placeholder="Reply to comment" rows="4"></textarea>
-                                        <button type="submit">Submit</button>
-                                        <button type="button" data-toggle="reply-form" data-target="comment-2-reply-form">Cancel</button>
-                                    </form>
-                                    <!-- Reply form end -->
-                                </div>
-                            </details>
-                            <!-- Comment 2 end -->
-                
-                            <a href="#load-more">Load more replies</a>
-                        </div>
-                    </div>
-                    <!-- Comment 1 end -->
-                </div>
-
-                <div class="comment-thread">
-                    <!-- Comment 1 start -->
-                    <div class="comment" id="comment-1">
-                        <a href="#comment-1" class="comment-border-link">
-                            <span class="sr-only">Jump to comment-1</span>
-                        </a>
-                        <div class="comment-heading">
-                            <div class="card-header">
-                                <img src="image/default.png" alt="" width="36" height="36" class="rounded-circle ms me-2" />
-                               
-                            </div>
-                            <div class="comment-info">
-                                <a href="#" class="comment-author">syamaidzardn</a>
-                                
-                                <p class="m-0">
-                                    Video games &bull; 4 days ago
-                                </p>
-                            
-                            </div>
+                            @if (auth()->user()->id == $item->User_id)
                             <a class="dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class='bx bx-dots-vertical-rounded' style='font-size: 16px; float: right; width: 100%;'></i>
                             </a>
@@ -162,24 +89,28 @@
                               <li><a class="dropdown-item" href="#">Edit post</a></li>
                               <li><a class="dropdown-item" href="#" style="color : #ff1f57;">Delete post</a></li>
                             </ul>
+                            @endif
                         </div>
-                        
                         <div class="comment-body">
                             <p>
-                                This is really great! I fully agree with what you wrote, and this is sure to help me out in the future. Thank you for posting this.
+                                {{$item->question}}
                             </p>
                             <button type="button" data-toggle="reply-form" data-target="comment-1-reply-form">Reply</button>
                             
                 
                             <!-- Reply form start -->
-                            <form method="POST" class="reply-form d-none" id="comment-1-reply-form">
-                                <textarea placeholder="Reply to comment" rows="4"></textarea>
+                            <form action="/reply" method="POST" class="reply-form d-none" id="comment-1-reply-form">
+                                @csrf
+                                <input name="userid" id="userid" type="hidden" value="{{auth()->user()->id}}">
+                                <input name="postid" id="postid" type="hidden" value="{{$item->id}}">
+                                <textarea name="reply" id="reply" placeholder="Reply to comment" rows="4"></textarea>
                                 <button type="submit">Submit</button>
                                 <button type="button" data-toggle="reply-form" data-target="comment-1-reply-form">Cancel</button>
                             </form>
                             <!-- Reply form end -->
                         </div>
-                
+                        @foreach ($item->replies as $bales)
+                            
                         <div class="replies">
                             <!-- Comment 2 start -->
                             <details open class="comment" id="comment-2">
@@ -192,9 +123,9 @@
                                             <img src="image/default.png" alt="" width="36" height="36" class="rounded-circle me-2" />
                                         </div>
                                         <div class="comment-info">
-                                            <a href="#" class="comment-author">randomperson81</a>
+                                            <a href="#" class="comment-author">{{$bales->user->username}}</a>
                                             <p class="m-0">
-                                                Video games &bull; 3 days ago
+                                                {{$bales->forum->Category->nama}} &bull; {{ \Carbon\Carbon::parse($bales->created_at)->diffForHumans() }}
                                             </p>
                                         </div>
                                     </div>
@@ -202,9 +133,8 @@
                 
                                 <div class="comment-body">
                                     <p>
-                                        Took the words right out of my mouth!
+                                        {{$bales->answers}}
                                     </p>
-                                    <button type="button" data-toggle="reply-form" data-target="comment-2-reply-form">Reply</button>
                                     
                 
                                     <!-- Reply form start -->
@@ -218,12 +148,16 @@
                             </details>
                             <!-- Comment 2 end -->
                 
-                            <a href="#load-more">Load more replies</a>
                         </div>
+
+                        @endforeach
                     </div>
                     <!-- Comment 1 end -->
                 </div>
+
             </div>
+
+            @endforeach
         
 
         <script src="/forum.js" charset="utf-8"></script>
