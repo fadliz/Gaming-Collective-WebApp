@@ -13,6 +13,10 @@ class Category extends Model
         'nama'
     ];
     public function Forums(){
-        return $this->hasMany(Forum::class);
+        return $this->hasMany(Forum::class,'Category_id');
+    }
+
+    public function items(){
+        return $this->hasMany(Item::class,'Category_id');
     }
 }

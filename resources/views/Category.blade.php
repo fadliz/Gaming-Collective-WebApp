@@ -29,22 +29,22 @@
                 <div class="mx-auto p-5">
                     <div class="card">
                         <div class="card-header">
+                            <form action="/Category" method="POST">
+                                @csrf
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text border-0">Category:</span>
                                         </div>
-                                        <select class="form-control border-0" id="" name="">
-                                            <option value="">Android</option>
-                                            <option value="">Camera (A - Z)</option>
-                                            <option value="">PC (A - Z)</option>
-                                            <option value="">Controller (A - Z)</option>
-                                            <option value="">Keyboard (A - Z)</option>
-                                            <option value="">Mice (A - Z)</option>
-                                            <option value="">Headset (A - Z)</option>
-                                            <option value="">Chair (A - Z)</option>
-                                            <option value="">PlayStation (Z - A)</option>
+                                        <select class="form-control border-0" id="kateg" name="kateg">
+
+                                            <option value="{{$temp->nama}}">{{$temp->nama}}</option>
+                                            @foreach ($kategori as $item)
+                                            @if ($temp->nama != $item->nama)
+                                            <option value="{{$item->nama}}">{{$item->nama}}</option>
+                                            @endif
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
@@ -67,152 +67,34 @@
                                 <div class="col-md-3">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <button type="button" class="btn btn-secondary input-group-prepend ">Submit Order</button>
+                                            <button type="submit" class="btn btn-secondary input-group-prepend ">Submit Order</button>
                                         </div>
                                     </div>
                                 </div>
 
                             </div>
+                        </form>
                         </div>
                         <div class="card-body">
                             <div class="row">
                                 <div class="hs__wrapper">
 
                                     <ul class="hs">
+                                        @foreach ($produk as $item)
+                                            
                                         <li class="hs__item">
                                             <div class="hs__item__image__wrapper">
-                                                <img class="hs__item__image" src="/image/gf image/fahri_GF_1.jpg"
+                                            <img class="hs__item__image" src="storage/{{$item->image}}"
                                                     alt="" />
                                             </div>
                                             <div class="hs__item__description">
-                                                <span class="hs__item__title">fahri gf</span><span
-                                                    class="hs__item__subtitle">hihi</span>
+                                                <span class="hs__item__title">{{$item->name}}</span><span
+                                                    class="hs__item__subtitle">{{$item->price}}</span>
                                             </div>
                                             <button class="button button5">add to cart</button>
                                         </li>
-                                        <li class="hs__item">
-                                            <div class="hs__item__image__wrapper">
-                                                <img class="hs__item__image" src="/image/gf image/fahri_GF_2.jpg"
-                                                    alt="" />
-                                            </div>
-                                            <div class="hs__item__description">
-                                                <span class="hs__item__title">fahri gf</span><span
-                                                    class="hs__item__subtitle">hihi</span>
-                                            </div>
-                                            <button class="button button5">add to cart</button>
-                                        </li>
-                                        <li class="hs__item">
-                                            <div class="hs__item__image__wrapper">
-                                                <img class="hs__item__image" src="/image/gf image/fahri_GF_3.jpg"
-                                                    alt="" />
-                                            </div>
-                                            <div class="hs__item__description">
-                                                <span class="hs__item__title">fahri gf</span><span
-                                                    class="hs__item__subtitle">hihi</span>
-                                            </div>
-                                            <button class="button button5">add to cart</button>
-                                        </li>
-                                        <li class="hs__item">
-                                            <div class="hs__item__image__wrapper">
-                                                <img class="hs__item__image" src="/image/gf image/fahri_GF_4.webp"
-                                                    alt="" />
-                                            </div>
-                                            <div class="hs__item__description">
-                                                <span class="hs__item__title">fahri gf</span><span
-                                                    class="hs__item__subtitle">hihi</span>
-                                            </div>
-                                            <button class="button button5">add to cart</button>
-                                        </li>
-                                        <li class="hs__item">
-                                            <div class="hs__item__image__wrapper">
-                                                <img class="hs__item__image" src="/image/gf image/fahri_GF_5.webp"
-                                                    alt="" />
-                                            </div>
-                                            <div class="hs__item__description">
-                                                <span class="hs__item__title">fahri gf</span><span
-                                                    class="hs__item__subtitle">hihi</span>
-                                            </div>
-                                            <button class="button button5">add to cart</button>
-                                        </li>
-                                        <li class="hs__item">
-                                            <div class="hs__item__image__wrapper">
-                                                <img class="hs__item__image" src="/image/gf image/fahri_GF_6.webp"
-                                                    alt="" />
-                                            </div>
-                                            <div class="hs__item__description">
-                                                <span class="hs__item__title">fahri gf</span><span
-                                                    class="hs__item__subtitle">hihi</span>
-                                            </div>
-                                            <button class="button button5">add to cart</button>
-                                        </li>
-                                    </ul>
-                                    <ul class="hs">
-                                        <li class="hs__item">
-                                            <div class="hs__item__image__wrapper">
-                                                <img class="hs__item__image" src="/image/gf image/fahri_GF_1.jpg"
-                                                    alt="" />
-                                            </div>
-                                            <div class="hs__item__description">
-                                                <span class="hs__item__title">fahri gf</span><span
-                                                    class="hs__item__subtitle">hihi</span>
-                                            </div>
-                                            <button class="button button5">add to cart</button>
-                                        </li>
-                                        <li class="hs__item">
-                                            <div class="hs__item__image__wrapper">
-                                                <img class="hs__item__image" src="/image/gf image/fahri_GF_2.jpg"
-                                                    alt="" />
-                                            </div>
-                                            <div class="hs__item__description">
-                                                <span class="hs__item__title">fahri gf</span><span
-                                                    class="hs__item__subtitle">hihi</span>
-                                            </div>
-                                            <button class="button button5">add to cart</button>
-                                        </li>
-                                        <li class="hs__item">
-                                            <div class="hs__item__image__wrapper">
-                                                <img class="hs__item__image" src="/image/gf image/fahri_GF_3.jpg"
-                                                    alt="" />
-                                            </div>
-                                            <div class="hs__item__description">
-                                                <span class="hs__item__title">fahri gf</span><span
-                                                    class="hs__item__subtitle">hihi</span>
-                                            </div>
-                                            <button class="button button5">add to cart</button>
-                                        </li>
-                                        <li class="hs__item">
-                                            <div class="hs__item__image__wrapper">
-                                                <img class="hs__item__image" src="/image/gf image/fahri_GF_4.webp"
-                                                    alt="" />
-                                            </div>
-                                            <div class="hs__item__description">
-                                                <span class="hs__item__title">fahri gf</span><span
-                                                    class="hs__item__subtitle">hihi</span>
-                                            </div>
-                                            <button class="button button5">add to cart</button>
-                                        </li>
-                                        <li class="hs__item">
-                                            <div class="hs__item__image__wrapper">
-                                                <img class="hs__item__image" src="/image/gf image/fahri_GF_5.webp"
-                                                    alt="" />
-                                            </div>
-                                            <div class="hs__item__description">
-                                                <span class="hs__item__title">fahri gf</span><span
-                                                    class="hs__item__subtitle">hihi</span>
-                                            </div>
-                                            <button class="button button5">add to cart</button>
-                                        </li>
-                                        <li class="hs__item">
-                                            <div class="hs__item__image__wrapper">
-                                                <img class="hs__item__image" src="/image/gf image/fahri_GF_6.webp"
-                                                    alt="" />
-                                            </div>
-                                            <div class="hs__item__description">
-                                                <span class="hs__item__title">fahri gf</span><span
-                                                    class="hs__item__subtitle">hihi</span>
-                                            </div>
-                                            <button class="button button5">add to cart</button>
-                                        </li>
+                                        @endforeach
+                                        
                                     </ul>
                                 </div>
                             </div>

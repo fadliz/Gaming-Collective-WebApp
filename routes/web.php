@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ForumController;
 use App\Http\Controllers\ReplyController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ItemController;
+use App\Models\Category;
 use App\Models\Forum;
 use App\Models\Item;
 use Illuminate\Support\Facades\Route;
@@ -62,7 +64,7 @@ Route::get('/EditForum', function () {
 });
 
 Route::get('/Category', function () {
-    return view('Category');
+    return view('Category',['produk'=>Item::all(),'kategori'=>Category::all()]);
 });
 
 Route::get('/Admin', function () {
@@ -134,3 +136,5 @@ Route::post('editingForum/{id}',[ForumController::class,'edit']);
 Route::get('/products', [ItemController::class, 'index']);
 
 Route::get('/ProductDetail/{id}', [ItemController::class, 'show']);
+
+Route::post('/Category',[CategoryController::class,'show']);
