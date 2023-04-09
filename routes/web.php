@@ -55,6 +55,10 @@ Route::get('/Forum', function () {
     return view('Forum',['post' => Forum::all()]);
 });
 
+Route::get('/EditForum', function () {
+    return view('EditForum');
+});
+
 Route::get('/Category', function () {
     return view('Category');
 });
@@ -69,6 +73,18 @@ Route::get('/AdminProduct', function () {
 
 Route::get('/AdminAddProduct', function () {
     return view('/admin/addproduct');
+});
+
+Route::get('/AdminEditProduct', function () {
+    return view('/admin/editproduct');
+});
+
+Route::get('/AdminCategory', function () {
+    return view('/admin/category');
+});
+
+Route::get('/AdminEditCategory', function () {
+    return view('/admin/editcategory');
 });
 
 Route::post('/Forum',[ForumController::class,'store']);

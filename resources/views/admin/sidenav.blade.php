@@ -91,27 +91,15 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file" class="align-text-bottom"></span>
-              Orders
-            </a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="/products">
               <span data-feather="shopping-cart" class="align-text-bottom"></span>
               Products
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/Category">
+            <a class="nav-link" href="/AdminCategory">
               <span data-feather="list" class="align-text-bottom"></span>
               Category
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="message-square" class="align-text-bottom"></span>
-              Forum
             </a>
           </li>
         </ul>
