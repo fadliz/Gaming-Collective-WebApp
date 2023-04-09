@@ -14,8 +14,4 @@ class item extends Model
     public function Category(){
         return $this->belongsTo(Category::class,'Category_id');
     }
-
-    public function user(){
-        return $this->belongsTo(User::class,'User_id');
-    }
 }

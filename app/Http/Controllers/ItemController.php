@@ -25,23 +25,23 @@ class ItemController extends Controller
     {
         $request->validate([
             'Category_id' => 'required',
-            'User_id' => 'required',
             'name' => 'required',
             'price' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
-        $image = $request->file('image');
-        $imageName = time() . '.' . $image->extension();
-        $image->move(public_path('images'), $imageName);
+        if ($request->hasFile('image')) {
+            $image = $request->file('image')->store('post-images');
+            $imagePath = $image;
+        } else {
+            $imagePath = 'image/default.png';
+        }
 
         $item = new Item([
             'Category_id' => $request->kategori,
-            'User_id' => $request->userid,
             'name' => $request->get('name'),
             'price' => $request->get('price'),
             'description' => $request->get('description'),
-            'image' => $imageName,
+            'image' => $imagePath,
         ]);
 
         $item->save();
@@ -65,11 +65,9 @@ class ItemController extends Controller
     {
         $request->validate([
             'Category_id' => 'required',
-            'User_id' => 'required',
             'name' => 'required',
             'price' => 'required',
             'description' => 'required',
-            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
         $item = Item::find($id);
@@ -78,10 +76,8 @@ class ItemController extends Controller
         $item->description = $request->get('description');
 
         if ($request->hasFile('image')) {
-            $image = $request->file('image');
-            $imageName = time() . '.' . $image->extension();
-            $image->move(public_path('images'), $imageName);
-            $item->image = $imageName;
+            $image = $request->file('image')->store('post-images');
+            $item->image = $image;
         }
 
         $item->save();
