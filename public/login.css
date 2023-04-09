@@ -1,94 +1,97 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 * {
-  box-sizing: border-box;
-  color: white;
+    box-sizing: border-box;
+    color: white;
 }
+
 body {
-  margin: 0;
-  padding: 0;
-  background: url(../image/bakground/Login_Background.png) no-repeat center center fixed;
-  background-size: cover;
-  width: 66%;
-  font-family: 'Montserrat', sans-serif;
-  color: white;
+    margin: 0;
+    padding: 0;
+    background: url(../image/bakground/Login_Background.png) no-repeat center center fixed;
+    background-size: cover;
+    width: 66%;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
 }
 
 .container {
-  position: relative;
-  height: 100vh;
+    position: relative;
+    height: 100vh;
 }
 
 .form-container {
-  position: absolute;
-  left: 80%;
-  top: 50%;
-  transform: translateY(-50%);
+    position: absolute;
+    left: 80%;
+    top: 50%;
+    transform: translateY(-50%);
 }
+
 input {
-  background-color: #333333;
-  border-radius: 20px;
-  padding: 15px 20px;
-  margin: 15px 0px;
-  width: 100%;
+    background-color: #333333;
+    border-radius: 20px;
+    padding: 15px 20px;
+    margin: 15px 0px;
+    width: 100%;
 }
+
 form {
-  background-color: #1A1A1A;
-  display: block;
-  align-items: center;
-  justify-content: center;
-  padding: 5 50px;
-  text-align: center;
-  border-radius: 30px;
-  color: white;
+    background-color: #1A1A1A;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    padding: 5 50px;
+    text-align: center;
+    border-radius: 30px;
+    color: white;
 }
 
 label {
-  color: white;
-  text-align: left;
-  display: block;
-  font-size: 18px;
+    color: white;
+    text-align: left;
+    display: block;
+    font-size: 18px;
 }
+
 button {
-  border-radius: 30px;
-  color: #FFFFFF;
-  background-color: #FFAC42;
-  font-size: 24px;
-  display: block;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 150px;
-  text-align: center;
-  margin: 20px;
+    border-radius: 30px;
+    color: #FFFFFF;
+    background-color: #FFAC42;
+    font-size: 24px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 150px;
+    text-align: center;
+    margin: 20px;
 }
 
-
-a{
-  color: #7289da;
+a {
+    color: #7289da;
 }
+
 .register {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .register:link {
-  color: #7289da;
+    color: #7289da;
 }
 
 .register:hover {
-  color: #7289da;
-  text-decoration: underline;
+    color: #7289da;
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 1000px) {
-	.form-container{
-		position: static;
-		transform: none;
-		width: 100%;
-	}
-	body{
-		background: #1A1A1A;
-	}
-
-	button{
-		padding: 5px 30px;
-	}
+    .form-container {
+        position: static;
+        transform: none;
+        width: 100%;
+    }
+    body {
+        background: #1A1A1A;
+    }
+    button {
+        padding: 5px 30px;
+    }
 }
