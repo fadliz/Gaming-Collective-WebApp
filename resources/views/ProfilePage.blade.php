@@ -21,17 +21,17 @@
 <body>
     @extends('Sidebar')
     @section('content')
-        <section class="py-4">
-            <div class="container">
+        <section class="sections p-5" >
+            <div class="container" >
                 <h1 class="mb-6">Account Settings</h1>
-                <div class="bg-white shadow rounded-lg d-block d-sm-flex">
+                <div class="shadow rounded-lg d-block d-sm-flex" style="color : #fffdfd !important;  background-color : #333333 !important; ">
                     <div class="profile-tab-nav border-right">
                         <div class="p-4">
                             <div class="img-circle text-center mb-3">
                                 <img src="storage/{{auth()->user()->profile}}" alt="Profile Picture" class="shadow"
                                     id="profile-pic">
                                 <br>
-                                <button type="button" class="btn btn-sm btn-primary mt-3" data-toggle="modal"
+                                <button type="button" class="btn btn-sm btn-primary mt-3 border-0" style="background-color : #ffac42 !important;" data-toggle="modal"
                                     data-target="#profile-pic-modal">Change Picture</button>
                             </div>
                             <h4 class="text-center">{{auth()->user()->username}}</h4>
@@ -78,7 +78,7 @@
                     <div class="tab-content p-4 p-md-5" id="v-pills-tabContent">
                         <div class="tab-pane fade show active" id="account" role="tabpanel"
                             aria-labelledby="account-tab">
-                            <h3 class="mb-4">Account Settings</h3>
+                            <h3 class="mb-4">Account Detail</h3>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -94,7 +94,7 @@
                                 </div>
                             </div>
                             <div>
-                                <button class="btn btn-primary">Update</button>
+                                <button class="btn btn-primary border-0" style="background-color : #ffac42 !important;">Update</button>
                                 <button class="btn btn-light">Cancel</button>
                             </div>
                         </div>

@@ -34,7 +34,7 @@
                     </div>
                     <p>Rp3.000,00</p>
                     <div class="wishlist-btn">
-                        <a href="#">Pindahkan ke wishlist</a>
+                        <a href="/Wishlist">Pindahkan ke wishlist</a>
                         <span class="batas">|</span>
                         <span ><a href="#">Hapus barang</a></span>
                     </div>
