@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Item;
 use App\Http\Controllers\Controller;
+use App\Models\Item;
 use App\Http\Requests\StoreItemRequest;
 use App\Http\Requests\UpdateItemRequest;
 use Illuminate\Http\Request;
@@ -13,7 +13,7 @@ class ItemController extends Controller
     public function index()
     {
         $items = Item::all();
-        return view('items.index', compact('items'));
+        return view('admin.product', ['items' => $items]);
     }
 
     public function create()
@@ -23,12 +23,6 @@ class ItemController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'Category_id' => 'required',
-            'name' => 'required',
-            'price' => 'required',
-        ]);
-
         if ($request->hasFile('image')) {
             $image = $request->file('image')->store('post-images');
             $imagePath = $image;
@@ -46,13 +40,13 @@ class ItemController extends Controller
 
         $item->save();
 
-        return redirect('/items')->with('success', 'Item saved!');
+        return redirect('/products')->with('success', 'Item saved!');
     }
 
     public function show($id)
     {
         $item = Item::find($id);
-        return view('items.show', compact('item'));
+        return view('ProductDetail', ['item' => $item]);
     }
 
     public function edit($id)

@@ -3,6 +3,7 @@
 use App\Http\Controllers\ForumController;
 use App\Http\Controllers\ReplyController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ItemController;
 use App\Models\Forum;
 use Illuminate\Support\Facades\Route;
 
@@ -117,3 +118,7 @@ Route::get('/Profile',function(){
 
 Route::post('/change-profile-pic/{id}',[UserController::class,'editProfilepPic']);
 Route::resource('items', ItemController::class);
+
+Route::get('/products', [ItemController::class, 'index']);
+
+Route::get('/ProductDetail/{id}', [ItemController::class, 'show']);

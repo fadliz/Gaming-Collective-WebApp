@@ -18,32 +18,27 @@
             </tr>
           </thead>
           <tbody>
+            @foreach ($items as $item)
+                
             <tr>
-              <td>1</td>
-              <td><img src="/image/gf image/fahri_GF_3.jpg" height="100" alt=""></td>
-              <td>random</td>
-              <td>data</td>
-              <td>placeholder</td>
-              <td>namaku bento</td>
+              <td>{{$loop->iteration}}</td>
+              <td><img src="{{$item->image}}" height="100" alt=""></td>
+              <td>{{$item->name}}</td>
+              <td>{{$item->Category->nama}}</td>
+              <td>{{$item->price}}</td>
+              <td>{{$item->description}}</td>
               <td>
-                <a href="" class="badge bg-info"><span data-feather="eye"></span></a>
-                <a href="/AdminEditProduct" class="badge bg-warning"><span data-feather="edit"></span></a>
-                <a href="" class="badge bg-danger"><span data-feather="x-circle"></span></a>
+                <a href="{{ route('items.show', $item->id) }}" class="badge bg-info"><span data-feather="eye"></span></a>
+                <a href="{{ route('items.edit', $item->id) }}" class="badge bg-warning"><span data-feather="edit"></span></a>
+                <form action="{{ route('items.destroy', $item->id) }}" method="POST" class="d-inline">
+                  @csrf
+                  @method('DELETE')
+                  <button type="submit" class="badge bg-danger" onclick="return confirm('Are you sure you want to delete this item?')"><span data-feather="x-circle"></span></button>
+                </form>
               </td>
             </tr>
-            <tr>
-              <td>1</td>
-              <td><img src="/image/gf image/fahri_GF_2.jpg" height="100" alt=""></td>
-              <td>random</td>
-              <td>data</td>
-              <td>placeholder</td>
-              <td>namaku bento</td>
-              <td>
-                <a href="" class="badge bg-info"><span data-feather="eye"></span></a>
-                <a href="/AdminEditProduct" class="badge bg-warning"><span data-feather="edit"></span></a>
-                <a href="" class="badge bg-danger"><span data-feather="x-circle"></span></a>
-              </td>
-            </tr>
+            
+            @endforeach
           </tbody>
         </table>
       </div>
