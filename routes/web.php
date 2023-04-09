@@ -88,3 +88,4 @@ Route::get('/Profile',function(){
 });
 
 Route::post('/change-profile-pic/{id}',[UserController::class,'editProfilepPic']);
+Route::resource('items', ItemController::class);
