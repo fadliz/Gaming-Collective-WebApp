@@ -73,4 +73,14 @@ class UserController extends Controller
  
         return redirect('/');
     }
+
+    public function editProfilepPic(Request $request,$id){
+        $ganti = user::find($id);
+        user::where('id',$ganti->id)
+        ->update([
+            'profile' => $request->file('profpic')->store('post-images')
+        ]);
+
+        return redirect('/Profile');
+    }
 }

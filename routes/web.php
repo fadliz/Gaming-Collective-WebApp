@@ -83,3 +83,8 @@ Route::get('/products',function () {
     return view('admin.product');
 });
 
+Route::get('/Profile',function(){
+    return view('ProfilePage');
+});
+
+Route::post('/change-profile-pic/{id}',[UserController::class,'editProfilepPic']);

@@ -28,15 +28,15 @@
                     <div class="profile-tab-nav border-right">
                         <div class="p-4">
                             <div class="img-circle text-center mb-3">
-                                <img src="/image/gf image/fahri_GF_3.jpg" alt="Profile Picture" class="shadow"
+                                <img src="storage/{{auth()->user()->profile}}" alt="Profile Picture" class="shadow"
                                     id="profile-pic">
                                 <br>
                                 <button type="button" class="btn btn-sm btn-primary mt-3" data-toggle="modal"
                                     data-target="#profile-pic-modal">Change Picture</button>
                             </div>
-                            <h4 class="text-center">Kang Yeji</h4>
+                            <h4 class="text-center">{{auth()->user()->username}}</h4>
                         </div>
-                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        {{-- <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                             <a class="nav-link active" id="account-tab" data-toggle="pill" href="#account" role="tab"
                                 aria-controls="account" aria-selected="true">
                                 <i class="fa fa-home text-center mr-1"></i>
@@ -47,22 +47,7 @@
                                 <i class="fa fa-key text-center mr-1"></i>
                                 Password
                             </a>
-                            <a class="nav-link" id="security-tab" data-toggle="pill" href="#security" role="tab"
-                                aria-controls="security" aria-selected="false">
-                                <i class="fa fa-user text-center mr-1"></i>
-                                Feed setting
-                            </a>
-                            <a class="nav-link" id="application-tab" data-toggle="pill" href="#application" role="tab"
-                                aria-controls="application" aria-selected="false">
-                                <i class="fa fa-tv text-center mr-1"></i>
-                                Application
-                            </a>
-                            <a class="nav-link" id="notification-tab" data-toggle="pill" href="#notification" role="tab"
-                                aria-controls="notification" aria-selected="false">
-                                <i class="fa fa-bell text-center mr-1"></i>
-                                Notification
-                            </a>
-                        </div>
+                        </div> --}}
                     </div>
 
 					<!-- ini buat form upload poto propil nya, sudah dibuat agar hanya jpg,png dan jpeg aja yang bisa diupload -->
@@ -77,10 +62,11 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="/change-profile-pic" method="POST" enctype="multipart/form-data">
+                                    <form action="/change-profile-pic/{{auth()->user()->id}}" method="POST" enctype="multipart/form-data">
+                                        @csrf
                                         <div class="form-group">
                                             <label for="new-profile-pic">Select a new profile picture:</label>
-                                            <input type="file" class="form-control-file" id="new-profile-pic" name="new-profile-pic" accept=".png, .jpg, .jpeg">
+                                            <input type="file" class="form-control-file" id="profpic" name="profpic" accept=".png, .jpg, .jpeg">
                                         </div>
                                         <button type="submit" class="btn btn-primary">Upload</button>
                                     </form>
@@ -96,47 +82,14 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>First Name</label>
-                                        <input type="text" class="form-control" value="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label>Last Name</label>
-                                        <input type="text" class="form-control" value="">
+                                        <label>Name</label>
+                                        <input type="text" class="form-control" placeholder="{{auth()->user()->name}}">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>Email</label>
-                                        <input type="email" class="form-control" value="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label>Phone number</label>
-                                        <input type="number" class="form-control" value="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label>Gender</label>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="gender" id="male"
-                                                value="Male">
-                                            <label class="form-check-label" for="male">Male</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="gender" id="female"
-                                                value="Female">
-                                            <label class="form-check-label" for="female">Female</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label>Bio</label>
-                                        <textarea class="form-control" rows="4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore vero enim error similique quia numquam ullam corporis officia odio repellendus aperiam consequatur laudantium porro voluptatibus, itaque laboriosam veritatis voluptatum distinctio!</textarea>
+                                        <input type="email" class="form-control" placeholder="{{auth()->user()->email}}">
                                     </div>
                                 </div>
                             </div>
