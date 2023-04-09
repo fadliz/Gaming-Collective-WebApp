@@ -22,7 +22,7 @@
     <div class="container sproduct ps-5 pt-0">
         <div class="row mt-5">
             <div class="col-lg-5 col-md-12 col-12">
-                <img class="img-fluid w-100 pb-2" src="/image/gf image/fahri_GF_2.jpg" id="MainImg" alt="" />
+                <img class="img-fluid w-100 pb-2" src="/storage/{{$item->image}}" id="MainImg" alt="" />
 
             </div>
         </div>

@@ -5,6 +5,7 @@ use App\Http\Controllers\ReplyController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ItemController;
 use App\Models\Forum;
+use App\Models\Item;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,11 +20,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('Homepage');
+    return view('Homepage',['produk'=>Item::all()]);
 });
 
 Route::get('/homepage', function () {
-    return view('Homepage');
+    return view('Homepage',['produk'=>Item::all()]);
 });
 
 Route::get('/login',function(){
@@ -41,7 +42,7 @@ Route::post('/',[UserController::class,'authenticate']);
 Route::get('/logout',[UserController::class,'logout']);
 
 Route::get('/Homepage', function () {
-    return view('Homepage');
+    return view('Homepage',['produk'=>Item::all()]);
 });
 
 Route::get('/ProductDetail', function () {

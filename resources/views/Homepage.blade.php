@@ -103,60 +103,19 @@
                     </div>
                 </div>
                 <ul class="hs">
+                    @foreach ($produk as $item)
+                        
+                    
                     <li class="hs__item" data-name="p-1">
                         <div class="hs__item__image__wrapper">
-                            <img class="hs__item__image" src="/image/gf image/fahri_GF_1.jpg" alt="" />
+                            <img class="hs__item__image" src="storage/{{$item->image}}" alt="" />
                         </div>
                         <div class="hs__item__description">
-                            <span class="hs__item__title">fahri gf</span><span class="hs__item__price">800.000</span>
+                            <span class="hs__item__title">{{$item->name}}</span><span class="hs__item__price">{{$item->price}}</span>
                         </div>
                         <button class="button button5">add to cart</button>
                     </li>
-                    <li class="hs__item" data-name="p-2">
-                        <div class="hs__item__image__wrapper">
-                            <img class="hs__item__image" src="/image/gf image/fahri_GF_2.jpg" alt="" />
-                        </div>
-                        <div class="hs__item__description">
-                            <span class="hs__item__title">fahri gf</span><span class="hs__item__price">800.000</span>
-                        </div>
-                        <button class="button button5">add to cart</button>
-                    </li>
-                    <li class="hs__item">
-                        <div class="hs__item__image__wrapper">
-                            <img class="hs__item__image" src="/image/gf image/fahri_GF_3.jpg" alt="" />
-                        </div>
-                        <div class="hs__item__description">
-                            <span class="hs__item__title">fahri gf</span><span class="hs__item__price">800.000</span>
-                        </div>
-                        <button class="button button5">add to cart</button>
-                    </li>
-                    <li class="hs__item">
-                        <div class="hs__item__image__wrapper">
-                            <img class="hs__item__image" src="/image/gf image/fahri_GF_4.webp" alt="" />
-                        </div>
-                        <div class="hs__item__description">
-                            <span class="hs__item__title">fahri gf</span><span class="hs__item__price">800.000</span>
-                        </div>
-                        <button class="button button5">add to cart</button>
-                    </li>
-                    <li class="hs__item">
-                        <div class="hs__item__image__wrapper">
-                            <img class="hs__item__image" src="/image/gf image/fahri_GF_5.webp" alt="" />
-                        </div>
-                        <div class="hs__item__description">
-                            <span class="hs__item__title">fahri gf</span><span class="hs__item__price">800.000</span>
-                        </div>
-                        <button class="button button5">add to cart</button>
-                    </li>
-                    <li class="hs__item">
-                        <div class="hs__item__image__wrapper">
-                            <img class="hs__item__image" src="/image/gf image/fahri_GF_6.webp" alt="" />
-                        </div>
-                        <div class="hs__item__description">
-                            <span class="hs__item__title">fahri gf</span><span class="hs__item__price">800.000</span>
-                        </div>
-                        <button class="button button5">add to cart</button>
-                    </li>
+                    @endforeach
                 </ul>
             </div>
         </div>
@@ -186,7 +145,7 @@
 
         <hr>
 
-        <div class="container">
+        {{-- <div class="container">
             <div class="hs__wrapper">
                 <div class="hs__header">
                     <h2 class="hs__headline">List
@@ -253,7 +212,7 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        </div> --}}
 
 
         <script src="/homepage.js"></script>
