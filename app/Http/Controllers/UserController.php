@@ -28,7 +28,7 @@ class UserController extends Controller
                 'email' => $validatedData['email'],
                 'password' => $validatedData['password'],
                 'username' => $validatedData['username'],
-                'profile' => 'image/default.png',
+                'profile' => 'post-images/default.png',
                 'tipe' => 'user'
             ]);
 

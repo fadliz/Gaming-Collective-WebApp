@@ -38,7 +38,7 @@
                 <div class="post-question py-5">
                     <div class="card">
                         <div class="card-header">
-                            <img src="image/default.png" alt="" width="36" height="36" class="rounded-circle me-2" />
+                            <img src="storage/{{auth()->user()->profile}}" alt="" width="36" height="36" class="rounded-circle me-2" />
                             {{auth()->user()->username}}
                         </div>
                         <div class="card-body">
@@ -73,7 +73,7 @@
                         </a>
                         <div class="comment-heading">
                             <div class="card-header">
-                                <img src="image/default.png" alt="" width="36" height="36" class="rounded-circle me-2" />
+                                <img src="storage/{{$item->user->profile}}" alt="" width="36" height="36" class="rounded-circle me-2" />
                             </div>
                             <div class="comment-info">
                                 <a href="#" class="comment-author">{{$item->User->username}}</a>
@@ -120,7 +120,7 @@
                                 <summary>
                                     <div class="comment-heading">
                                         <div class="card-header">
-                                            <img src="image/default.png" alt="" width="36" height="36" class="rounded-circle me-2" />
+                                            <img src="storage/{{$bales->user->profile}}" alt="" width="36" height="36" class="rounded-circle me-2" />
                                         </div>
                                         <div class="comment-info">
                                             <a href="#" class="comment-author">{{$bales->user->username}}</a>
