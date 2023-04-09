@@ -62,6 +62,16 @@
                                         </select>
                                     </div>
                                 </div>
+
+                                <!-- button buat submit category dan jumlah item -->
+                                <div class="col-md-3">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <button type="button" class="btn btn-secondary input-group-prepend ">Submit Order</button>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                         <div class="card-body">
@@ -241,9 +251,8 @@
                 <div class="row"></div>
                 <div class="row"></div>
             </div>
-
-            <script src="/category.js" charset="utf-8"></script>
         @endsection
+        <script src="/category.js"></script>
 
 </body>
 
