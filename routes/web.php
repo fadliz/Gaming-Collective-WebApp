@@ -66,7 +66,7 @@ Route::get('/EditForum', function () {
 });
 
 Route::get('/Category', function () {
-    return view('Category',['produk'=>Item::all(),'kategori'=>Category::all()]);
+    return view('Category',['produk'=>Item::all(),'kategori'=>Category::all(),'temp'=>Category::first()]);
 });
 
 Route::get('/Admin', function () {

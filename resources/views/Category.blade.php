@@ -39,7 +39,7 @@
                                         </div>
                                         <select class="form-control border-0" id="kateg" name="kateg">
 
-                                            <option value="{{$temp->nama}}">{{$temp->nama}}</option>
+                                            <option selected value="{{$temp->nama}}">{{$temp->nama}}</option>
                                             @foreach ($kategori as $item)
                                             @if ($temp->nama != $item->nama)
                                             <option value="{{$item->nama}}">{{$item->nama}}</option>
