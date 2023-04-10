@@ -20,9 +20,9 @@
       <label class="input-group-text" for="kategori">Category</label>
       <select class="form-select" name="kategori" id="kategori">
         <option selected>Choose...</option>
-        <option value="1">Video games</option>
-        <option value="2">Gaming gear</option>
-        <option value="3">Accessories</option>
+        @foreach ($kategori as $item)
+        <option value="{{$item->id}}">{{$item->nama}}</option>
+        @endforeach
       </select>
     </div>
     <label for="description">Deskripsi Produk</label>

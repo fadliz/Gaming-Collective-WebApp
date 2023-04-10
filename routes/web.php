@@ -76,7 +76,7 @@ Route::get('/AdminProduct', function () {
 });
 
 Route::get('/AdminAddProduct', function () {
-    return view('/admin/addproduct');
+    return view('/admin/addproduct',['kategori'=> Category::all()]);
 });
 
 Route::get('/AdminEditProduct', function () {
@@ -136,5 +136,9 @@ Route::post('editingForum/{id}',[ForumController::class,'edit']);
 Route::get('/products', [ItemController::class, 'index']);
 
 Route::get('/ProductDetail/{id}', [ItemController::class, 'show']);
+
+Route::get('/editItem/{id}', function($id) {
+    return view('admin.editproduct',['item'=>Item::find($id),'kategori'=>Category::all()]);
+});
 
 Route::post('/Category',[CategoryController::class,'show']);

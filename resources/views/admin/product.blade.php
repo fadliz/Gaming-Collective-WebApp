@@ -29,7 +29,7 @@
               <td>{{$item->description}}</td>
               <td>
                 <a href="{{ route('items.show', $item->id) }}" class="badge bg-info"><span data-feather="eye"></span></a>
-                <a href="{{ route('items.edit', $item->id) }}" class="badge bg-warning"><span data-feather="edit"></span></a>
+                <a href="/editItem/{{$item->id}}" class="badge bg-warning"><span data-feather="edit"></span></a>
                 <form action="{{ route('items.destroy', $item->id) }}" method="POST" class="d-inline">
                   @csrf
                   @method('DELETE')
