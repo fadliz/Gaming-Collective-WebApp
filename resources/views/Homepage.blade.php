@@ -104,50 +104,28 @@
                 </div>
                 <ul class="hs">
                     @foreach ($produk as $item)
-                        
-                    
-                    <li class="hs__item" data-name="p-1">
-                        <div class="hs__item__image__wrapper">
-                            <img class="hs__item__image" src="storage/{{$item->image}}" alt="" />
-                        </div>
-                        <div class="hs__item__description">
-                            <a href="/ProductDetail/{{$item->id}}"><span class="hs__item__title">{{$item->name}}</span><span class="hs__item__price">{{$item->price}}</span></a>
-                            
-                        </div>
-                        <form action="/addCart/{{$item->id}}" method="get">
-                            <input type="hidden" name="userid" id="userid" value="{{auth()->user()->id}}">
-                            <a href="/addCart/{{$item->id}}"><button class="button button5" >add to cart</button></a>
-                        </form>
-                        
-                    </li>
-                    <li class="hs__item" data-name="p-1">
-                        <div class="hs__item__image__wrapper">
-                            <img class="hs__item__image" src="/image/gf image/fahri_GF_1.jpg" alt="" />
-                        </div>
-                        <div class="hs__item__description">
-                            <span class="hs__item__title">{{$item->name}}</span><span class="hs__item__price">{{$item->price}}</span>
-                        </div>
-                        <button class="button button5">add to cart</button>
-                    </li>
-                    <li class="hs__item" data-name="p-1">
-                        <div class="hs__item__image__wrapper">
-                            <img class="hs__item__image" src="/image/gf image/fahri_GF_1.jpg" alt="" />
-                        </div>
-                        <div class="hs__item__description">
-                            <span class="hs__item__title">{{$item->name}}</span><span class="hs__item__price">{{$item->price}}</span>
-                        </div>
-                        <button class="button button5">add to cart</button>
-                    </li>
-                    <li class="hs__item" data-name="p-1">
-                        <div class="hs__item__image__wrapper">
-                            <img class="hs__item__image" src="/image/gf image/fahri_GF_1.jpg" alt="" />
-                        </div>
-                        <div class="hs__item__description">
-                            <span class="hs__item__title">{{$item->name}}</span><span class="hs__item__price">{{$item->price}}</span>
-                        </div>
-                        <button class="button button5">add to cart</button>
-                    </li>
-                    
+                        <li class="hs__item" data-name="p-1">
+                            <div class="hs__item__image__wrapper">
+                                <img class="hs__item__image" src="storage/{{ $item->image }}" alt="" />
+                            </div>
+                            <div class="hs__item__description">
+                                <a href="/ProductDetail/{{ $item->id }}"><span
+                                        class="hs__item__title">{{ $item->name }}</span><span
+                                        class="hs__item__price">{{ $item->price }}</span></a>
+
+                            </div>
+                            @if (auth()->check())
+                                <form action="/addCart/{{ $item->id }}" method="get">
+                                    <input type="hidden" name="userid" id="userid"
+                                        value="{{ auth()->user()->id }}">
+                                    <button type="submit" class="button button5">add to cart</button>
+                                </form>
+                            @else
+                                <p>Please log in to add items to your cart.</p>
+                            @endif
+
+
+                        </li>
                     @endforeach
                 </ul>
             </div>
