@@ -25,32 +25,33 @@
                 <img class="img-fluid w-100 pb-2" src="/storage/{{$item->image}}" id="MainImg" alt="" />
 
             </div>
-        </div>
-        <div class="col-lg-6 col-md-12 col-12">
-            <h3 style='font-weight : 700;'>
-                {{ $item->name }}
-            </h3>
-            <hr />
-            <div class="time-and-bid pb-1">
-                <i class="bx bx-grid-alt"></i>
-                <span class="link_name">Category : <a href="#">{{ $item->category->nama }}</a></span>
+            <div class="col-lg-6 col-md-12 col-12">
+                <h3 style='font-weight : 700;'>
+                    {{ $item->name }}
+                </h3>
+                <hr />
+                <div class="time-and-bid pb-1">
+                    <i class="bx bx-grid-alt"></i>
+                    <span class="link_name">Category : <a href="#">{{ $item->category->nama }}</a></span>
+                </div>
+    
+                <hr />
+                <h5>Deskripsi Produk</h5>
+                <span class="deskripsi-produk">
+                    {{ $item->description }}
+                </span>
+                <hr />
+                <h3 class="detail-item-harga pb-5">Rp. {{ number_format($item->price, 2) }}</h3>
+                <div class="box-button d-flex  align-items-center">
+                    <form action="/addCart/{{$item->id}}" method="get">
+                        <input type="hidden" name="userid" id="userid" value="{{auth()->user()->id}}">
+                        <a href="/addCart/{{$item->id}}"><button class="button button5">add to cart</button></a>
+                    </form>
+                    <a href="#" class="bn3638 bn38 mx-2"><i class='bx bxs-heart bx-tada px-1'></i>Wishlist</a>
+                </div>
             </div>
-
-            <hr />
-            <h5>Deskripsi Produk</h5>
-            <span class="deskripsi-produk">
-                {{ $item->description }}
-            </span>
-            <hr />
-            <h3 class="detail-item-harga pb-5">Rp. {{ number_format($item->price, 2) }}</h3>
-            <div class="box-button">
-                <form action="/addCart/{{$item->id}}" method="get">
-                    <input type="hidden" name="userid" id="userid" value="{{auth()->user()->id}}">
-                    <a href="/addCart/{{$item->id}}"><button class="button button5" >add to cart</button></a>
-                </form>
-                <a href="#" class="bn3638 bn38 mx-2"><i class='bx bxs-heart bx-tada px-1'></i></i>Wishlist</a>
-            </div>
         </div>
+        
 
 
     <hr style='visibility: hidden;'>
