@@ -111,7 +111,7 @@
                             <div class="hs__item__description">
                                 <a href="/ProductDetail/{{ $item->id }}"><span
                                         class="hs__item__title">{{ $item->name }}</span><span
-                                        class="hs__item__price">{{ $item->price }}</span></a>
+                                        class="hs__item__price">Rp {{ number_format($item->price, 2, ',', '.') }}</span></a>
 
                             </div>
                             @if (auth()->check())
