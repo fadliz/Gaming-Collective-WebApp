@@ -89,7 +89,7 @@
                                             </div>
                                             <div class="hs__item__description">
                                                 <span class="hs__item__title">{{$item->name}}</span><span
-                                                    class="hs__item__subtitle">{{$item->price}}</span>
+                                                    class="hs__item__subtitle">Rp {{number_format($item->price, 2, ',', '.')}}</span>
                                             </div>
                                             <button class="button button5">add to cart</button>
                                         </li>
