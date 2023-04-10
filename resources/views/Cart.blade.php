@@ -21,59 +21,64 @@
 <body>
     @extends('Sidebar')
     @section('content')
-        <div class="back ps-5 pt-5">
-            <a href="#"><span><i class='bx bx-chevron-left'></i></span>Back</a>
-        </div>
-        @php
-            $totalPrice = 0;
-        @endphp
-        <div class="cart-container p-5">
-            <h3 style='font-weight : 700;'>Shopping Cart</h3>
-            @foreach ($carts as $item)
-                @php
-                    $totalPrice += $item->item->price;
-                @endphp
-                <div class="product-card mt-5">
-                    <div class="img-product">
-                        <img src="storage/{{ $item->item->image }}" alt="">
-
-                    </div>
-                    <div class="product-detail ps-3 pt-2 pb-2">
-                        <div class="product-name pb-1 " style='font-weight : 500;'>
-                            {{ $item->item->name }}
-                        </div>
-                        <p>Rp {{ number_format($item->item->price, 2, ',', '.') }}</p>
-                        <div class="wishlist-btn">
-                            <a href="/Wishlist">Pindahkan ke wishlist</a>
-                            <span class="batas">|</span>
-                            <form action="{{ route('carts.destroy', $item) }}" method="POST" class="d-inline"
-                                onsubmit="return confirm('Are you sure you want to delete this item?')">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit">Hapus barang</button>
-                            </form>
-                        </div>
-                        <div class="qty">
-
-                            <div class="counter">
-                                <span class="down" onClick='decreaseCount(event, this)'>-</span>
-                                <input type="text" value="1">
-                                <span class="up" onClick='increaseCount(event, this)'>+</span>
+        @if(Auth::check())
+            <div class="back ps-5 pt-5">
+                <a href="#"><span><i class='bx bx-chevron-left'></i></span>Back</a>
+            </div>
+            @php
+                $totalPrice = 0;
+            @endphp
+            <div class="cart-container p-5">
+                <h3 style='font-weight : 700;'>Shopping Cart</h3>
+                @foreach ($carts as $item)
+                    @if($item->User_id == Auth::user()->id)
+                        @php
+                            $totalPrice += $item->item->price;
+                        @endphp
+                        <div class="product-card mt-5">
+                            <div class="img-product">
+                                <img src="storage/{{ $item->item->image }}" alt="">
+                            </div>
+                            <div class="product-detail ps-3 pt-2 pb-2">
+                                <div class="product-name pb-1 " style='font-weight : 500;'>
+                                    {{ $item->item->name }}
+                                </div>
+                                <p>Rp {{ number_format($item->item->price, 2, ',', '.') }}</p>
+                                <div class="wishlist-btn">
+                                    <a href="/Wishlist">Pindahkan ke wishlist</a>
+                                    <span class="batas">|</span>
+                                    <form action="{{ route('carts.destroy', $item) }}" method="POST" class="d-inline"
+                                        onsubmit="return confirm('Are you sure you want to delete this item?')">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit">Hapus barang</button>
+                                    </form>
+                                </div>
+                                <div class="qty">
+                                    <div class="counter">
+                                        <span class="down" onClick='decreaseCount(event, this)'>-</span>
+                                        <input type="text" value="1">
+                                        <span class="up" onClick='increaseCount(event, this)'>+</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    @endif
+                @endforeach
+                <div class="chechout py-5">
+                    <label style='font-size : 20px; font-weight : 500;'>Total Harga : </label>
+                    <span>Rp {{ number_format($totalPrice, 2, ',', '.') }}</span>
                 </div>
-            @endforeach
-            <div class="chechout py-5">
-                <label style='font-size : 20px; font-weight : 500;'>Total Harga : </label>
-                <span>Rp {{ number_format($totalPrice, 2, ',', '.') }}</span>
+                <div class="box-button">
+                    <a href="/Checkout" class="bn3637 bn37">Checkout</a>
+                </div>
+                <script src="/cart.js" charset="utf-8"></script>
             </div>
-            <div class="box-button">
-                <a href="/Checkout" class="bn3637 bn37">Checkout</a>
-            </div>
-            <script src="/cart.js" charset="utf-8"></script>
-        @endsection
-
+        @else
+            <p>Please login to view your cart.</p>
+        @endif
+    @endsection
 </body>
+
 
 </html>
