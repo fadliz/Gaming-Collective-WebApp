@@ -39,7 +39,7 @@ body {
 a {
     text-decoration: none;
     color: black;
-  }
+}
 
 .search-container input[type="text"] {
     background-color: #333333;
@@ -203,6 +203,11 @@ a {
     user-select: none;
 }
 
+.hs__item__description a {
+    text-decoration: none;
+    color: #fffdfd;
+}
+
 @media only screen and (max-width: 990px) {
     .hs__item {
         flex-basis: calc(100% / 3 - (10px * 2) - (20px / 3));
@@ -269,7 +274,6 @@ a {
         flex: 1 0 calc(45% - 10px * 2);
     }
 }
-
 
 /* Base Styling */
 
@@ -389,7 +393,6 @@ body {
 .bn38:hover {
     transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
 }
-
 
 /* .products-preview .preview {
     display: none;
