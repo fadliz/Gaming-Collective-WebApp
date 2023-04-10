@@ -145,5 +145,7 @@ Route::get('/editItem/{id}', function($id) {
     return view('admin.editproduct',['item'=>Item::find($id),'kategori'=>Category::all()]);
 });
 
+Route::resource('carts', CartController::class);
+
 Route::post('/Category',[CategoryController::class,'show']);
 //Route::get('/editProduk/{id}',[ItemController::class,'update']);

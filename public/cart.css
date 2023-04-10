@@ -75,6 +75,18 @@ img {
     transition: all 0.3s ease-out;
 }
 
+/* Style for the button */
+.wishlist-btn button {
+    text-decoration: none;
+    color: #ffac42;
+    transition: all 0.3s ease-out;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
 .wishlist-btn a:hover {
     color: #fffdfd;
 }
