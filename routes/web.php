@@ -59,7 +59,7 @@ Route::get('/Cart', function () {
 
 Route::get('/Forum', function () {
     return view('Forum',['post' => Forum::all()]);
-});
+})->middleware('auth');
 
 Route::get('/EditForum', function () {
     return view('EditForum');
