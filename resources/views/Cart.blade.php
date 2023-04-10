@@ -42,7 +42,7 @@
                         <div class="product-name pb-1 " style='font-weight : 500;'>
                             {{ $item->item->name }}
                         </div>
-                        <p>Rp{{ $item->item->price }}</p>
+                        <p>Rp {{ number_format($item->item->price, 2, ',', '.') }}</p>
                         <div class="wishlist-btn">
                             <a href="/Wishlist">Pindahkan ke wishlist</a>
                             <span class="batas">|</span>
@@ -66,7 +66,7 @@
             @endforeach
             <div class="chechout py-5">
                 <label style='font-size : 20px; font-weight : 500;'>Total Harga : </label>
-                <span>Rp{{ number_format($totalPrice, 2, ',', '.') }}</span>
+                <span>Rp {{ number_format($totalPrice, 2, ',', '.') }}</span>
             </div>
             <div class="box-button">
                 <a href="/Checkout" class="bn3637 bn37">Checkout</a>
