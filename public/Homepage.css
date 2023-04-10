@@ -132,6 +132,8 @@ a {
     -ms-overflow-style: none;
     -webkit-overflow-scrolling: touch;
     margin: 0 -20px;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .hs__header {
@@ -208,12 +210,6 @@ a {
     color: #fffdfd;
 }
 
-@media only screen and (max-width: 990px) {
-    .hs__item {
-        flex-basis: calc(100% / 3 - (10px * 2) - (20px / 3));
-    }
-}
-
 .hs__item:last-child:after {
     content: "";
     display: block;
@@ -274,6 +270,7 @@ a {
         flex: 1 0 calc(45% - 10px * 2);
     }
 }
+
 
 /* Base Styling */
 
@@ -393,6 +390,7 @@ body {
 .bn38:hover {
     transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
 }
+
 
 /* .products-preview .preview {
     display: none;

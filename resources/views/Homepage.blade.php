@@ -120,37 +120,42 @@
                         </form>
                         
                     </li>
+                    <li class="hs__item" data-name="p-1">
+                        <div class="hs__item__image__wrapper">
+                            <img class="hs__item__image" src="/image/gf image/fahri_GF_1.jpg" alt="" />
+                        </div>
+                        <div class="hs__item__description">
+                            <span class="hs__item__title">{{$item->name}}</span><span class="hs__item__price">{{$item->price}}</span>
+                        </div>
+                        <button class="button button5">add to cart</button>
+                    </li>
+                    <li class="hs__item" data-name="p-1">
+                        <div class="hs__item__image__wrapper">
+                            <img class="hs__item__image" src="/image/gf image/fahri_GF_1.jpg" alt="" />
+                        </div>
+                        <div class="hs__item__description">
+                            <span class="hs__item__title">{{$item->name}}</span><span class="hs__item__price">{{$item->price}}</span>
+                        </div>
+                        <button class="button button5">add to cart</button>
+                    </li>
+                    <li class="hs__item" data-name="p-1">
+                        <div class="hs__item__image__wrapper">
+                            <img class="hs__item__image" src="/image/gf image/fahri_GF_1.jpg" alt="" />
+                        </div>
+                        <div class="hs__item__description">
+                            <span class="hs__item__title">{{$item->name}}</span><span class="hs__item__price">{{$item->price}}</span>
+                        </div>
+                        <button class="button button5">add to cart</button>
+                    </li>
+                    
                     @endforeach
                 </ul>
             </div>
         </div>
 
-        {{-- <div class="products-preview">
-            <div class="preview" data-target="p-1">
-                <i class="fas fa-times"></i>
-                <img src="/image/gf image/fahri_GF_5.webp" alt="">
-                <h3>Shin Ryujin</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
-                <div class="price">Rp 800.000</div>
-                <div class="buttons">
-                    <a href="#" class="cart">add to cart</a>
-                </div>
-            </div>
-            <div class="preview" data-target="p-2">
-                <i class="fas fa-times"></i>
-                <img src="/image/gf image/fahri_GF_2.jpg" alt="">
-                <h3>Shin Ryujin</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
-                <div class="price">Rp 800.000</div>
-                <div class="buttons">
-                    <a href="#" class="cart">add to cart</a>
-                </div>
-            </div>
-        </div> --}}
-
         <hr>
 
-        {{-- <div class="container">
+        <div class="container">
             <div class="hs__wrapper">
                 <div class="hs__header">
                     <h2 class="hs__headline">List
@@ -161,63 +166,97 @@
                     </div>
                 </div>
                 <ul class="hs">
-                    <li class="hs__item">
+                    @foreach ($produk as $item)
+                        
+                    
+                    <li class="hs__item" data-name="p-1">
                         <div class="hs__item__image__wrapper">
                             <img class="hs__item__image" src="/image/gf image/fahri_GF_1.jpg" alt="" />
                         </div>
                         <div class="hs__item__description">
-                            <span class="hs__item__title">fahri gf</span><span class="hs__item__price">800.000</span>
+                            <span class="hs__item__title">{{$item->name}}</span><span class="hs__item__price">{{$item->price}}</span>
                         </div>
                         <button class="button button5">add to cart</button>
                     </li>
-                    <li class="hs__item">
+                    <li class="hs__item" data-name="p-1">
                         <div class="hs__item__image__wrapper">
-                            <img class="hs__item__image" src="/image/gf image/fahri_GF_2.jpg" alt="" />
+                            <img class="hs__item__image" src="/image/gf image/fahri_GF_1.jpg" alt="" />
                         </div>
                         <div class="hs__item__description">
-                            <span class="hs__item__title">fahri gf</span><span class="hs__item__price">800.000</span>
+                            <span class="hs__item__title">{{$item->name}}</span><span class="hs__item__price">{{$item->price}}</span>
                         </div>
                         <button class="button button5">add to cart</button>
                     </li>
-                    <li class="hs__item">
+                    <li class="hs__item" data-name="p-1">
                         <div class="hs__item__image__wrapper">
-                            <img class="hs__item__image" src="/image/gf image/fahri_GF_3.jpg" alt="" />
+                            <img class="hs__item__image" src="/image/gf image/fahri_GF_1.jpg" alt="" />
                         </div>
                         <div class="hs__item__description">
-                            <span class="hs__item__title">fahri gf</span><span class="hs__item__price">800.000</span>
+                            <span class="hs__item__title">{{$item->name}}</span><span class="hs__item__price">{{$item->price}}</span>
                         </div>
                         <button class="button button5">add to cart</button>
                     </li>
-                    <li class="hs__item">
+                    <li class="hs__item" data-name="p-1">
                         <div class="hs__item__image__wrapper">
-                            <img class="hs__item__image" src="/image/gf image/fahri_GF_4.webp" alt="" />
+                            <img class="hs__item__image" src="/image/gf image/fahri_GF_1.jpg" alt="" />
                         </div>
                         <div class="hs__item__description">
-                            <span class="hs__item__title">fahri gf</span><span class="hs__item__price">800.000</span>
+                            <span class="hs__item__title">{{$item->name}}</span><span class="hs__item__price">{{$item->price}}</span>
                         </div>
                         <button class="button button5">add to cart</button>
                     </li>
-                    <li class="hs__item">
+                    <li class="hs__item" data-name="p-1">
                         <div class="hs__item__image__wrapper">
-                            <img class="hs__item__image" src="/image/gf image/fahri_GF_5.webp" alt="" />
+                            <img class="hs__item__image" src="/image/gf image/fahri_GF_1.jpg" alt="" />
                         </div>
                         <div class="hs__item__description">
-                            <span class="hs__item__title">fahri gf</span><span class="hs__item__price">800.000</span>
+                            <span class="hs__item__title">{{$item->name}}</span><span class="hs__item__price">{{$item->price}}</span>
                         </div>
                         <button class="button button5">add to cart</button>
                     </li>
-                    <li class="hs__item">
+                    <li class="hs__item" data-name="p-1">
                         <div class="hs__item__image__wrapper">
-                            <img class="hs__item__image" src="/image/gf image/fahri_GF_6.webp" alt="" />
+                            <img class="hs__item__image" src="/image/gf image/fahri_GF_1.jpg" alt="" />
                         </div>
                         <div class="hs__item__description">
-                            <span class="hs__item__title">fahri gf</span><span class="hs__item__price">800.000</span>
+                            <span class="hs__item__title">{{$item->name}}</span><span class="hs__item__price">{{$item->price}}</span>
                         </div>
                         <button class="button button5">add to cart</button>
                     </li>
+                    <li class="hs__item" data-name="p-1">
+                        <div class="hs__item__image__wrapper">
+                            <img class="hs__item__image" src="/image/gf image/fahri_GF_1.jpg" alt="" />
+                        </div>
+                        <div class="hs__item__description">
+                            <span class="hs__item__title">{{$item->name}}</span><span class="hs__item__price">{{$item->price}}</span>
+                        </div>
+                        <button class="button button5">add to cart</button>
+                    </li>
+                    <li class="hs__item" data-name="p-1">
+                        <div class="hs__item__image__wrapper">
+                            <img class="hs__item__image" src="/image/gf image/fahri_GF_1.jpg" alt="" />
+                        </div>
+                        <div class="hs__item__description">
+                            <span class="hs__item__title">{{$item->name}}</span><span class="hs__item__price">{{$item->price}}</span>
+                        </div>
+                        <button class="button button5">add to cart</button>
+                    </li>
+                    <li class="hs__item" data-name="p-1">
+                        <div class="hs__item__image__wrapper">
+                            <img class="hs__item__image" src="/image/gf image/fahri_GF_1.jpg" alt="" />
+                        </div>
+                        <div class="hs__item__description">
+                            <span class="hs__item__title">{{$item->name}}</span><span class="hs__item__price">{{$item->price}}</span>
+                        </div>
+                        <button class="button button5">add to cart</button>
+                    </li>
+                    
+                    
+                    @endforeach
                 </ul>
             </div>
-        </div> --}}
+        </div>
+
 
 
         <script src="/homepage.js"></script>

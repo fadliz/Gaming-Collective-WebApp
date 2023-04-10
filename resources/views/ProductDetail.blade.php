@@ -23,7 +23,6 @@
         <div class="row mt-5">
             <div class="col-lg-5 col-md-12 col-12">
                 <img class="img-fluid w-100 pb-2" src="/storage/{{$item->image}}" id="MainImg" alt="" />
-
             </div>
             <div class="col-lg-6 col-md-12 col-12">
                 <h3 style='font-weight : 700;'>
