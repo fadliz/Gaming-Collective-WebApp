@@ -44,7 +44,10 @@
             <hr />
             <h3 class="detail-item-harga pb-5">Rp. {{ number_format($item->price, 2) }}</h3>
             <div class="box-button">
-                <a href="#" class="bn3637 bn37">Add to Cart</a>
+                <form action="/addCart/{{$item->id}}" method="get">
+                    <input type="hidden" name="userid" id="userid" value="{{auth()->user()->id}}">
+                    <a href="/addCart/{{$item->id}}"><button class="button button5" >add to cart</button></a>
+                </form>
                 <a href="#" class="bn3638 bn38 mx-2"><i class='bx bxs-heart bx-tada px-1'></i></i>Wishlist</a>
             </div>
         </div>

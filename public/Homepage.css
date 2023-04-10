@@ -36,6 +36,11 @@ body {
     color: #fffdfd;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+  }
+
 .search-container input[type="text"] {
     background-color: #333333;
     padding: 10px;

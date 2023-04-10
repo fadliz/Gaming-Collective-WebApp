@@ -111,9 +111,14 @@
                             <img class="hs__item__image" src="storage/{{$item->image}}" alt="" />
                         </div>
                         <div class="hs__item__description">
-                            <span class="hs__item__title">{{$item->name}}</span><span class="hs__item__price">{{$item->price}}</span>
+                            <a href="/ProductDetail/{{$item->id}}"><span class="hs__item__title">{{$item->name}}</span><span class="hs__item__price">{{$item->price}}</span></a>
+                            
                         </div>
-                        <button class="button button5">add to cart</button>
+                        <form action="/addCart/{{$item->id}}" method="get">
+                            <input type="hidden" name="userid" id="userid" value="{{auth()->user()->id}}">
+                            <a href="/addCart/{{$item->id}}"><button class="button button5" >add to cart</button></a>
+                        </form>
+                        
                     </li>
                     @endforeach
                 </ul>

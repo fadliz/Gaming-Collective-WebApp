@@ -16,15 +16,15 @@ class CartController extends Controller
         return view('carts.index', compact('carts'));
     }
 
-    public function store(Request $request)
+    public function store(Request $request,$id)
     {
-        $cart = new Cart;
-        $cart->user_id = auth()->user()->id;
-        $cart->item_id = $request->item_id;
-        $cart->quantity = $request->quantity;
-        $cart->save();
+        Cart::create([
+            'User_id'=> $request->userid,
+            'Item_id'=> $id,
+            'quantity' => 1
+        ]);
 
-        return back()->with('success', 'Item added to cart!');
+        return view('Cart',['carts'=>Cart::all()])->with('success', 'Item added to cart!');
     }
 
     public function update(Request $request, Cart $cart)

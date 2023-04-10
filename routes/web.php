@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ForumController;
 use App\Http\Controllers\ReplyController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ItemController;
+use App\Models\Cart;
 use App\Models\Category;
 use App\Models\Forum;
 use App\Models\Item;
@@ -52,7 +54,7 @@ Route::get('/ProductDetail', function () {
 });
 
 Route::get('/Cart', function () {
-    return view('Cart');
+    return view('Cart',['carts'=>Cart::all()]);
 });
 
 Route::get('/Forum', function () {
@@ -137,8 +139,11 @@ Route::get('/products', [ItemController::class, 'index']);
 
 Route::get('/ProductDetail/{id}', [ItemController::class, 'show']);
 
+Route::get('/addCart/{id}', [CartController::class, 'store']);
+
 Route::get('/editItem/{id}', function($id) {
     return view('admin.editproduct',['item'=>Item::find($id),'kategori'=>Category::all()]);
 });
 
 Route::post('/Category',[CategoryController::class,'show']);
+//Route::get('/editProduk/{id}',[ItemController::class,'update']);

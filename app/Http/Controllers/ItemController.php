@@ -57,12 +57,7 @@ class ItemController extends Controller
 
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'Category_id' => 'required',
-            'name' => 'required',
-            'price' => 'required',
-            'description' => 'required',
-        ]);
+        
 
         $item = Item::find($id);
         $item->name = $request->get('name');
@@ -76,7 +71,7 @@ class ItemController extends Controller
 
         $item->save();
 
-        return redirect('/items')->with('success', 'Item updated!');
+        return redirect('/products')->with('success', 'Item updated!');
     }
 
     public function destroy($id)
