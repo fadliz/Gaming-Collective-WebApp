@@ -23,7 +23,7 @@
     @section('content')
         @if(Auth::check())
             <div class="back ps-5 pt-5">
-                <a href="#"><span><i class='bx bx-chevron-left'></i></span>Back</a>
+                <a href="{{ url()->previous() }}"><span><i class='bx bx-chevron-left'></i></span>Back</a>
             </div>
             @php
                 $totalPrice = 0;
@@ -45,7 +45,12 @@
                                 </div>
                                 <p>Rp {{ number_format($item->item->price, 2, ',', '.') }}</p>
                                 <div class="wishlist-btn">
-                                    <a href="/Wishlist">Pindahkan ke wishlist</a>
+                                    <form action='/addWishlist' method="post">
+                                        @csrf
+                                        <input type="hidden" name="userid" id="userid" value="{{auth()->user()->id}}">
+                                        <input type="hidden" name="itemid" id="itemid" value="{{$item->id}}">
+                                        <button type="submit" style="padding-right: 0px"> Pindahkan ke wishlist</a></button>
+                                    </form>
                                     <span class="batas">|</span>
                                     <form action="{{ route('carts.destroy', $item) }}" method="POST" class="d-inline"
                                         onsubmit="return confirm('Are you sure you want to delete this item?')">

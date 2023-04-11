@@ -46,7 +46,12 @@
                         <input type="hidden" name="userid" id="userid" value="{{auth()->user()->id}}">
                         <a href="/addCart/{{$item->id}}"><button class="button button5">add to cart</button></a>
                     </form>
-                    <a href="#" class="bn3638 bn38 mx-2"><i class='bx bxs-heart bx-tada px-1'></i>Wishlist</a>
+                    <form action='/addWishlist' method="post">
+                        @csrf
+                        <input type="hidden" name="userid" id="userid" value="{{auth()->user()->id}}">
+                        <input type="hidden" name="itemid" id="itemid" value="{{$item->id}}">
+                        <button type="submit" class="bn3638 bn38 mx-2"><i class='bx bxs-heart bx-tada px-1'></i>Wishlist</button>
+                    </form>
                 </div>
             </div>
         </div>

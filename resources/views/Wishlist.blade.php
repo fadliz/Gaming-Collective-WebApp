@@ -19,25 +19,29 @@
     @extends('Sidebar') 
     @section('content')
         <div class="back ps-5 pt-5">
-            <a href="#"><span><i class='bx bx-chevron-left' ></i></span>Back</a>
+            <a href="{{ url()->previous() }}"><span><i class='bx bx-chevron-left' ></i></span>Back</a>
         </div>
         <div class="cart-container p-5">
             <h3 style='font-weight : 700;'>Wishlist</h3>
+            @foreach ($wishes as $item)
+            @if ($item->User_id == auth()->user()->id)
             <div class="product-card mt-5">
                 <div class="img-product">
-                    <img src="/image/gf image/fahri_GF_2.jpg" alt="">
+                    <img src="storage/{{$item->item->image}}" alt="">
                     
                 </div>
                 <div class="product-detail ps-3 pt-2 pb-2">
                     <div class="product-name pb-1 " style='font-weight : 500;'>
-                        Headset Cantik
+                        {{$item->item->name}}
                     </div>
-                    <p>Rp3.000,00</p>
+                    <p>Rp{{$item->item->price}}</p>
                     <div class="wishlist-btn">
-                        <a href="#">Hapus dari wishlist</a>
+                        <a href="/delWishlist/{{$item->id}}">Hapus dari wishlist</a>
                     </div>
                 </div>
             </div>
+            @endif
+            @endforeach
         </div>
         <script src="/cart.js" charset="utf-8"></script>
     @endsection

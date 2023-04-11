@@ -6,10 +6,12 @@ use App\Http\Controllers\ForumController;
 use App\Http\Controllers\ReplyController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\WishlistController;
 use App\Models\Cart;
 use App\Models\Category;
 use App\Models\Forum;
 use App\Models\Item;
+use App\Models\Wishlist;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -94,7 +96,7 @@ Route::get('/AdminEditCategory', function () {
 });
 
 Route::get('/Wishlist', function () {
-    return view('Wishlist');
+    return view('Wishlist',['wishes'=>Wishlist::all()]);
 });
 
 Route::get('/HistoryPembelian', function () {
@@ -140,6 +142,10 @@ Route::get('/products', [ItemController::class, 'index']);
 Route::get('/ProductDetail/{id}', [ItemController::class, 'show']);
 
 Route::get('/addCart/{id}', [CartController::class, 'store']);
+
+Route::get('/delWishlist/{id}', [WishlistController::class, 'destroy']);
+
+Route::post('/addWishlist', [WishlistController::class, 'store']);
 
 Route::get('/editItem/{id}', function($id) {
     return view('admin.editproduct',['item'=>Item::find($id),'kategori'=>Category::all()]);
