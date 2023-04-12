@@ -13,9 +13,10 @@ class CategoryController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request)
+    public function index()
     {
-        //
+        $kategs = Category::all();
+        return view('admin.category', ['kategs' => $kategs]);
     }
 
     /**
@@ -29,9 +30,14 @@ class CategoryController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreCategoryRequest $request)
+    public function store(Request $request)
     {
-        //
+    
+        $category = new Category;
+        $category->nama = $request->category_name;
+        $category->save();
+    
+        return redirect('/AdminCategory');
     }
 
     /**
@@ -49,9 +55,14 @@ class CategoryController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateCategoryRequest $request, Category $category)
+    public function update(Request $request,  $id)
     {
-        //
+        $kateg = Category::find($id);
+        $kateg->nama = $request->get('nama');
+
+        $kateg->save();
+
+        return redirect('/AdminCategory')->with('success', 'Category updated!');
     }
 
     /**
@@ -63,9 +74,9 @@ class CategoryController extends Controller
     }
 
     public function show(Request $request){
-
+        
         $item = Category::where('nama',$request->kateg)->first();
-
+        
         return view('Category',['produk'=>$item->items->all(),'kategori'=>Category::all(),'temp' => $item]);
     }
 }

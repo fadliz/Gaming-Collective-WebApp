@@ -115,7 +115,7 @@
 
                             </div>
                             @if (auth()->check())
-                                <form action="/addCart/{{ $item->id }}" method="get">
+                                <form action="/Cart/{{ $item->id }}" method="get">
                                     <input type="hidden" name="userid" id="userid"
                                         value="{{ auth()->user()->id }}">
                                     <button type="submit" class="button button5">add to cart</button>

@@ -37,8 +37,8 @@
                         @endphp
                         <div class="product-card mt-5">
                             <div class="img-product">
-                                <img src="storage/{{ $item->item->image }}" alt="">
-                            </div>
+                                <img src="{{ url('storage/'.$item->item->image) }}" alt="">
+                            </div>                            
                             <div class="product-detail ps-3 pt-2 pb-2">
                                 <div class="product-name pb-1 " style='font-weight : 500;'>
                                     {{ $item->item->name }}
@@ -48,7 +48,7 @@
                                     <form action='/addWishlist' method="post">
                                         @csrf
                                         <input type="hidden" name="userid" id="userid" value="{{auth()->user()->id}}">
-                                        <input type="hidden" name="itemid" id="itemid" value="{{$item->id}}">
+                                        <input type="hidden" name="itemid" id="itemid" value="{{$item->item->id}}">
                                         <button type="submit" style="padding-right: 0px"> Pindahkan ke wishlist</a></button>
                                     </form>
                                     <span class="batas">|</span>

@@ -4,7 +4,7 @@
         <h1 class="h2">Product</h1>
     </div>
     <a href="/AdminAddProduct" class="btn btn-primary btn-lg "><span data-feather="plus-circle" class="align-text-middle"></span> Add Product</a>
-    <div class="table-responsive col-lg-8">
+    <div class="table-responsive">
         <table class="table table-striped table-sm">
           <thead>
             <tr>
@@ -14,7 +14,7 @@
               <th scope="col">Category Product</th>
               <th scope="col">Harga Product</th>
               <th scope="col">Deskripsi Product</th>
-              <th scope="col">Action</th>
+              <th scope="col" style="width:10%">Action</th>
             </tr>
           </thead>
           <tbody>

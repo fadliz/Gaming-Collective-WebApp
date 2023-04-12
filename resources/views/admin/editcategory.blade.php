@@ -4,14 +4,20 @@
         <h1 class="h2">Edit Category</h1>
     </div>
     <div class="card-body">
-        <div class="form-group">
-            <label for="exampleFormControlTextarea1">Tambah Category</label>
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">Category Name</span>
-                <input type="text" class="form-control" placeholder="Category" aria-label="Category" aria-describedby="basic-addon1">
-              </div>
-        </div>
+        <form action="{{ route('category.update', $kateg) }}" method="POST" enctype="multipart/form-data">
+            @csrf
+            @method('PATCH')
+            <div class="form-group">
+                <label for="CategoryName">Tambah Category</label>
+                <div class="input-group mb-3 mt-2">
+                    
+                    <span class="input-group-text" id="basic-addon1">Category Name</span>
+                    <input type="text" name="nama" class="form-control" value="{{ old('nama', $kateg->nama) }}"
+                        aria-label="Category name" aria-describedby="basic-addon1">
+                </div>
+            </div>
+                <button type="submit" href="" class="btn btn-primary btn-md mt-5"> Edit Product</button>
+        </form>
     </div>
-    <a href="" class="btn btn-primary btn-md mt-3"> Edit Product</a>
-    <a href="" class="btn btn-outline-danger btn-md mt-3"> Cancel</a>
+    <a href="/AdminCategory" class="btn btn-outline-danger btn-md mt-3"> Cancel</a>
 @endsection

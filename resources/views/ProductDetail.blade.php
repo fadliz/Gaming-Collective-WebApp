@@ -42,9 +42,9 @@
                 <hr />
                 <h3 class="detail-item-harga pb-5">Rp. {{ number_format($item->price, 2) }}</h3>
                 <div class="box-button d-flex  align-items-center">
-                    <form action="/addCart/{{$item->id}}" method="get">
+                    <form action="/Cart/{{$item->id}}" method="get">
                         <input type="hidden" name="userid" id="userid" value="{{auth()->user()->id}}">
-                        <a href="/addCart/{{$item->id}}"><button class="button button5">add to cart</button></a>
+                        <a href="/Cart/{{$item->id}}"><button class="button button5">add to cart</button></a>
                     </form>
                     <form action='/addWishlist' method="post">
                         @csrf

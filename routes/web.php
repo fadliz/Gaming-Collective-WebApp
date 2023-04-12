@@ -139,9 +139,11 @@ Route::post('editingForum/{id}',[ForumController::class,'edit']);
 
 Route::get('/products', [ItemController::class, 'index']);
 
+Route::get('/AdminCategory', [CategoryController::class, 'index']); 
+
 Route::get('/ProductDetail/{id}', [ItemController::class, 'show']);
 
-Route::get('/addCart/{id}', [CartController::class, 'store']);
+Route::get('/Cart/{id}', [CartController::class, 'store']);
 
 Route::get('/delWishlist/{id}', [WishlistController::class, 'destroy']);
 
@@ -151,7 +153,13 @@ Route::get('/editItem/{id}', function($id) {
     return view('admin.editproduct',['item'=>Item::find($id),'kategori'=>Category::all()]);
 });
 
+Route::get('/AdminEditCategory/{id}', function($id) {
+    return view('admin.editcategory', ['kateg'=>Category::find($id)]);
+});
+
 Route::resource('carts', CartController::class);
+
+Route::resource('category', CategoryController::class);
 
 Route::post('/Category',[CategoryController::class,'show']);
 //Route::get('/editProduk/{id}',[ItemController::class,'update']);

@@ -39,6 +39,6 @@ class CartController extends Controller
     {
         $cart->delete();
 
-        return back()->with('success', 'Item removed from cart!');
+        return view('Cart',['carts'=>Cart::all()])->with('success', 'Item removed from cart!');
     }
 }
