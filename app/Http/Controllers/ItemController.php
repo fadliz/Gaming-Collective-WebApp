@@ -57,11 +57,11 @@ class ItemController extends Controller
 
     public function update(Request $request, $id)
     {
-        
 
         $item = Item::find($id);
         $item->name = $request->get('name');
         $item->price = $request->get('price');
+        $item->Category_id = $request->get('kategori');
         $item->description = $request->get('description');
 
         if ($request->hasFile('image')) {

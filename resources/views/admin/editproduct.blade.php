@@ -20,7 +20,7 @@
             <label for="kategori">Pilih Category</label>
             <div class="input-group mb-3 mt-2">
                 <label class="input-group-text" for="inputGroupSelect01">Category</label>
-                <select class="form-select" id="inputGroupSelect01">
+                <select class="form-select" id="kategori" name="kategori">
                     <option selected value="{{ $item->Category->id }}">{{ $item->Category->nama }}</option>
                     @foreach ($kategori as $kateg)
                         <option value="{{ $kateg->id }}">{{ $kateg->nama }}</option>
