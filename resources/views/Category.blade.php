@@ -48,7 +48,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-3">
+                                    {{-- <div class="col-md-3">
                                         <div class="input-group">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text border-0">Show:</span>
@@ -61,7 +61,7 @@
                                                 <option value="">100</option>
                                             </select>
                                         </div>
-                                    </div>
+                                    </div> --}}
 
                                     <!-- button buat submit category dan jumlah item -->
                                     <div class="col-md-3">
@@ -106,7 +106,7 @@
                             </div>
                             <div class="card-footer p-3">
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    {{-- <div class="col-md-6">
                                         <ul class="pagination m-0">
                                             <li class="page-item disabled border-0">
                                                 <a class="page-link border-0"
@@ -120,7 +120,7 @@
                                                 <a class="page-link border-0" href="#">Next</a>
                                             </li>
                                         </ul>
-                                    </div>
+                                    </div> --}}
                                     <div class="col-md-6">
                                         <p class="text-right mb-0 mt-1">Showing 1 to {{ count($produk) }} of
                                             {{ count($produk) }} (1 Pages)</p>
