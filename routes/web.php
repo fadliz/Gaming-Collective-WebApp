@@ -53,7 +53,7 @@ Route::get('/Homepage', function () {
 
 Route::get('/ProductDetail', function () {
     return view('ProductDetail');
-});
+})->middleware('auth');
 
 Route::get('/Cart', function () {
     return view('Cart',['carts'=>Cart::all()]);
@@ -141,7 +141,7 @@ Route::get('/products', [ItemController::class, 'index']);
 
 Route::get('/AdminCategory', [CategoryController::class, 'index']); 
 
-Route::get('/ProductDetail/{id}', [ItemController::class, 'show']);
+Route::get('/ProductDetail/{id}', [ItemController::class, 'show'])->middleware('auth');
 
 Route::get('/Cart/{id}', [CartController::class, 'store']);
 
