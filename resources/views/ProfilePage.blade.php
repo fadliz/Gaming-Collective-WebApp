@@ -97,9 +97,9 @@
                             </div>
                         
                             <div>
-                                <button class="btn btn-primary">Update</button>
+                                <button class="btn btn-primary border-0" style="background-color : #ffac42 !important;">Update</button>
                         </form>
-                                <button class="btn btn-light">Cancel</button>
+                                <button class="btn btn-outline-danger">Cancel</button>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="password" role="tabpanel" aria-labelledby="password-tab">
