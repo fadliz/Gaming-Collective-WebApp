@@ -159,6 +159,8 @@ Route::get('/AdminEditCategory/{id}', function($id) {
 
 Route::resource('carts', CartController::class);
 
+Route::delete('carts', [CartController::class, 'destroyAll'])->name('carts.destroyAll');
+
 Route::resource('category', CategoryController::class);
 
 Route::post('/Category',[CategoryController::class,'show']);

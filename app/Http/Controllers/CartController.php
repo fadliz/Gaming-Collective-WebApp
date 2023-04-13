@@ -16,15 +16,15 @@ class CartController extends Controller
         return view('carts.index', compact('carts'));
     }
 
-    public function store(Request $request,$id)
+    public function store(Request $request, $id)
     {
         Cart::create([
-            'User_id'=> $request->userid,
-            'Item_id'=> $id,
+            'User_id' => $request->userid,
+            'Item_id' => $id,
             'quantity' => 1
         ]);
 
-        return view('Cart',['carts'=>Cart::all()])->with('success', 'Item added to cart!');
+        return view('Cart', ['carts' => Cart::all()])->with('success', 'Item added to cart!');
     }
 
     public function update(Request $request, Cart $cart)
@@ -39,6 +39,14 @@ class CartController extends Controller
     {
         $cart->delete();
 
-        return view('Cart',['carts'=>Cart::all()])->with('success', 'Item removed from cart!');
+        return view('Cart', ['carts' => Cart::all()])->with('success', 'Item removed from cart!');
+    }
+
+    public function destroyAll()
+    {
+        $carts = auth()->user()->carts;
+        $carts->each->delete();
+
+        return view('Cart', ['carts' => Cart::all()])->with('success', 'All cart items removed!');
     }
 }

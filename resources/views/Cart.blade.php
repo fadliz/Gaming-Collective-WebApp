@@ -75,7 +75,11 @@
                     <span>Rp {{ number_format($totalPrice, 2, ',', '.') }}</span>
                 </div>
                 <div class="box-button">
-                    <a href="/Checkout" class="bn3637 bn37">Checkout</a>
+                    <form action="{{ route('carts.destroyAll') }}" method="POST" onsubmit="return confirm('Are you sure you want to checkout?')">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="bn3637 bn37">Checkout</button>
+                    </form>
                 </div>
                 <script src="/cart.js" charset="utf-8"></script>
             </div>
