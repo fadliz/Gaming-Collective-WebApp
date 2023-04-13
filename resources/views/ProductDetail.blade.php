@@ -74,60 +74,20 @@
                     </div>
 
                     <ul class="hs ">
+                        @foreach ($random as $rand)
                         <li class="hs__item">
                             <div class="hs__item__image__wrapper">
-                                <img class="hs__item__image" src="/image/gf image/fahri_GF_1.jpg" alt="" />
+                                <img class="hs__item__image" src="/storage/{{$rand->image}}" alt="" />
                             </div>
                             <div class="hs__item__description">
-                                <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
+                                <a href="/ProductDetail/{{ $rand->id }}"><span class="hs__item__title">{{$rand->name}}</span><span class="hs__item__subtitle">{{$rand->price}}</span></a>
                             </div>
-                            <button class="button button5">Add to Cart</button>
+                            <form action="/Cart/{{ $item->id }}" method="get">
+                                <input type="hidden" name="userid" id="userid" value="{{ auth()->user()->id }}">
+                                <a href="/Cart/{{ $item->id }}"><button class="button button5">add to cart</button></a>
+                            </form>
                         </li>
-                        <li class="hs__item">
-                            <div class="hs__item__image__wrapper">
-                                <img class="hs__item__image" src="/image/gf image/fahri_GF_2.jpg" alt="" />
-                            </div>
-                            <div class="hs__item__description">
-                                <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
-                            </div>
-                            <button class="button button5">Add to Cart</button>
-                        </li>
-                        <li class="hs__item">
-                            <div class="hs__item__image__wrapper">
-                                <img class="hs__item__image" src="/image/gf image/fahri_GF_3.jpg" alt="" />
-                            </div>
-                            <div class="hs__item__description">
-                                <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
-                            </div>
-                            <button class="button button5">Add to Cart</button>
-                        </li>
-                        <li class="hs__item">
-                            <div class="hs__item__image__wrapper">
-                                <img class="hs__item__image" src="/image/gf image/fahri_GF_4.webp" alt="" />
-                            </div>
-                            <div class="hs__item__description">
-                                <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
-                            </div>
-                            <button class="button button5">Add to Cart</button>
-                        </li>
-                        <li class="hs__item">
-                            <div class="hs__item__image__wrapper">
-                                <img class="hs__item__image" src="/image/gf image/fahri_GF_5.webp" alt="" />
-                            </div>
-                            <div class="hs__item__description">
-                                <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
-                            </div>
-                            <button class="button button5">Add to Cart</button>
-                        </li>
-                        <li class="hs__item">
-                            <div class="hs__item__image__wrapper">
-                                <img class="hs__item__image" src="/image/gf image/fahri_GF_6.webp" alt="" />
-                            </div>
-                            <div class="hs__item__description">
-                                <span class="hs__item__title">fahri gf</span><span class="hs__item__subtitle">hihi</span>
-                            </div>
-                            <button class="button button5">Add to Cart</button>
-                        </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>

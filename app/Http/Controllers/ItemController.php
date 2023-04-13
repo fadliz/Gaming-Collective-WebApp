@@ -7,6 +7,7 @@ use App\Models\Item;
 use App\Http\Requests\StoreItemRequest;
 use App\Http\Requests\UpdateItemRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ItemController extends Controller
 {
@@ -45,8 +46,12 @@ class ItemController extends Controller
 
     public function show($id)
     {
+        $randomRows = DB::table('items')
+        ->inRandomOrder()
+        ->limit(4)
+        ->get();
         $item = Item::find($id);
-        return view('ProductDetail', ['item' => $item]);
+        return view('ProductDetail', ['item' => $item,'random' => $randomRows]);
     }
 
     public function edit($id)
