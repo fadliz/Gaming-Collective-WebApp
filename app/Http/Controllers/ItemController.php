@@ -81,4 +81,17 @@ class ItemController extends Controller
 
         return redirect('/items')->with('success', 'Item deleted!');
     }
+
+    public function search(Request $request)
+    {
+        $query = $request->input('query');
+
+        $items = Item::where('name', 'LIKE', "%$query%")->get();
+
+        if ($items->count() > 0) {
+            return redirect()->route('items.show', ['item' => $items->first()->id]);
+        } else {
+            return redirect()->back()->with('error', 'No results found.');
+        }
+    }
 }

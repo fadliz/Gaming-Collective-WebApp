@@ -164,4 +164,7 @@ Route::delete('carts', [CartController::class, 'destroyAll'])->name('carts.destr
 Route::resource('category', CategoryController::class);
 
 Route::post('/Category',[CategoryController::class,'show']);
+
+Route::get('search', [ItemController::class, 'search'])->name('items.search');
+
 //Route::get('/editProduk/{id}',[ItemController::class,'update']);

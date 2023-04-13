@@ -21,12 +21,13 @@
 
 <body>
     @extends('Sidebar') @section('content')
-        <div class="search-container p-5">
-            <input type="text" placeholder="Search..." />
+        <form action="{{ route('items.search') }}" method="GET" class="search-container p-5">
+            <input type="text" name="query" placeholder="Search..." />
             <button type="submit">
                 <i class='bx bx-search'></i>
             </button>
-        </div>
+        </form>
+
         @auth
             <div class="profile p-5">
                 <span>Welcome, {{ auth()->user()->username }} !</span>
@@ -110,8 +111,8 @@
                             </div>
                             <div class="hs__item__description">
                                 <a href="/ProductDetail/{{ $item->id }}"><span
-                                        class="hs__item__title">{{ $item->name }}</span><span
-                                        class="hs__item__price">Rp {{ number_format($item->price, 2, ',', '.') }}</span></a>
+                                        class="hs__item__title">{{ $item->name }}</span><span class="hs__item__price">Rp
+                                        {{ number_format($item->price, 2, ',', '.') }}</span></a>
 
                             </div>
                             @if (auth()->check())
@@ -126,13 +127,12 @@
 
 
                         </li>
-
                     @endforeach
                 </ul>
             </div>
         </div>
 
-        
+
 
 
 
