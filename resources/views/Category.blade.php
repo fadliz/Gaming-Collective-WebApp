@@ -37,7 +37,7 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text border-0">Category:</span>
                                             </div>
-                                            <select class="form-control border-0" id="kateg" name="kateg">
+                                            <select class="form-control border-0 " id="kateg" name="kateg">
 
                                                 <option selected value="{{ $temp->nama }}">{{ $temp->nama }}</option>
                                                 @foreach ($kategori as $item)
@@ -67,8 +67,7 @@
                                     <div class="col-md-3">
                                         <div class="input-group">
                                             <div class="input-group-prepend">
-                                                <button type="submit" class="btn btn-secondary input-group-prepend ">Submit
-                                                    Order</button>
+                                                <button type="submit" class="btn input-group-prepend" style="background-color: #4d4d4d;">Submit Order</button>
                                             </div>
                                         </div>
                                     </div>

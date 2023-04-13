@@ -75,7 +75,9 @@ img {
     transition: all 0.3s ease-out;
 }
 
+
 /* Style for the button */
+
 .wishlist-btn button {
     text-decoration: none;
     color: #ffac42;
@@ -85,7 +87,6 @@ img {
     cursor: pointer;
     font-size: 16px;
 }
-
 
 .wishlist-btn a:hover {
     color: #fffdfd;
@@ -106,8 +107,8 @@ img {
 }
 
 .batas {
-    margin-left: 10px;
-    margin-right: 10px;
+    display: flexbox;
+    inset: 1rem;
 }
 
 .qty {
@@ -132,6 +133,7 @@ img {
     appearance: none;
     outline: 0;
 }
+
 .counter span {
     display: block;
     font-size: 24px;

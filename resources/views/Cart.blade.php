@@ -44,14 +44,14 @@
                                     {{ $item->item->name }}
                                 </div>
                                 <p>Rp {{ number_format($item->item->price, 2, ',', '.') }}</p>
-                                <div class="wishlist-btn">
+                                <div class="wishlist-btn" style="display: flex; align-items: center;">
                                     <form action='/addWishlist' method="post">
                                         @csrf
                                         <input type="hidden" name="userid" id="userid" value="{{auth()->user()->id}}">
                                         <input type="hidden" name="itemid" id="itemid" value="{{$item->item->id}}">
-                                        <button type="submit" style="padding-right: 0px"> Pindahkan ke wishlist</a></button>
+                                        <button type="submit" style="padding-right: 10px"> Pindahkan ke wishlist</button>
                                     </form>
-                                    <span class="batas">|</span>
+                                    <span class="batas" style="padding-right: 10px">|</span>
                                     <form action="{{ route('carts.destroy', $item) }}" method="POST" class="d-inline"
                                         onsubmit="return confirm('Are you sure you want to delete this item?')">
                                         @csrf
