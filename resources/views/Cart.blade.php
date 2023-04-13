@@ -59,13 +59,13 @@
                                         <button type="submit">Hapus barang</button>
                                     </form>
                                 </div>
-                                <div class="qty">
+                                {{-- <div class="qty">
                                     <div class="counter">
                                         <span class="down" onClick='decreaseCount(event, this)'>-</span>
                                         <input type="text" value="1">
                                         <span class="up" onClick='increaseCount(event, this)'>+</span>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     @endif
