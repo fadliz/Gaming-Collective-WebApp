@@ -26,12 +26,12 @@
         <div class="forum-container p-5">
             <div class="top-forum">
                 <h3 style='font-weight : 700;'>Forum</h3>
-                <div class="search-container">
+                {{-- <div class="search-container">
                     <input type="text" placeholder="Search Forum..." />
                     <button type="submit">
                         <i class='bx bx-search'></i>
                     </button>
-                </div>
+                </div> --}}
             </div>
             <form action="/Forum" method="post">
                 @csrf
