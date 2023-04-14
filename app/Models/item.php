@@ -18,6 +18,10 @@ class Item extends Model
 
     public function carts()
     {
-        return $this->hasMany(Cart::class);
+        return $this->hasMany(Cart::class,'Item_id');
+    }
+    public function wishes()
+    {
+        return $this->hasMany(Wishlist::class,'Item_id');
     }
 }

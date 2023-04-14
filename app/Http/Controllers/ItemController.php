@@ -82,8 +82,10 @@ class ItemController extends Controller
     public function destroy($id)
     {
         $item = Item::find($id);
+        $item->wishes()->delete();
         $item->carts()->delete();
         $item->delete();
+        
 
         return redirect('/items')->with('success', 'Item deleted!');
     }
