@@ -18,7 +18,7 @@
     @extends('Sidebar')
     @section('content')
         <div class="back ps-5 pt-5">
-            <a href="#"><span><i class='bx bx-chevron-left'></i></span>Back</a>
+            <a href="{{ url()->previous() }}"><span><i class='bx bx-chevron-left'></i></span>Back</a>
         </div>
         <div class="container sproduct ps-5 pt-0">
             <div class="row mt-5">
