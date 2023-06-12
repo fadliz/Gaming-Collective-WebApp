@@ -17,3 +17,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/login',[UserAPIController::class,'login']);
 Route::post('/register',[UserAPIController::class,'register']);
+Route::get('/avatar/{id}',[UserAPIController::class,'profpic']);

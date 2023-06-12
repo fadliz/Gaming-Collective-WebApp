@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class UserAPIController extends Controller
 {
@@ -54,5 +55,29 @@ public function register(Request $request)
         // Kirim respons sukses
         return response()->json(['message' => 'Registrasi berhasil'], 200);
     }
+
+    public function profpic($id)
+{   
+    if($id != 0){
+        $user = User::find($id);
+    
+        if (!$user) {
+            return response()->json(['error' => 'User not found'], 404);
+        }
+    
+        $avatarPath = $user->profile; // Path gambar avatar dalam tabel user
+
+    } else{
+        $avatarPath = 'post-images/default.png';
+    }
+
+    if (!$avatarPath) {
+        return response()->json(['error' => 'Avatar not found'], 404);
+    }
+
+    $image = Storage::disk('public')->get($avatarPath);
+
+    return response($image, 200)->header('Content-Type', 'image/jpeg');
+}
 
 }
