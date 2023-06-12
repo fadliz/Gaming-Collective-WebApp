@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ItemAPIController;
 use App\Http\Controllers\UserAPIController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -18,3 +19,5 @@ use Illuminate\Support\Facades\Route;
 Route::post('/login',[UserAPIController::class,'login']);
 Route::post('/register',[UserAPIController::class,'register']);
 Route::get('/avatar/{id}',[UserAPIController::class,'profpic']);
+Route::get('/items',[ItemAPIController::class,'index']);
+Route::get('/gambarBarang/{id}',[ItemAPIController::class,'imgItem']);
