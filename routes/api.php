@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CartAPIController;
 use App\Http\Controllers\ItemAPIController;
 use App\Http\Controllers\UserAPIController;
 use Illuminate\Http\Request;
@@ -21,3 +22,4 @@ Route::post('/register',[UserAPIController::class,'register']);
 Route::get('/avatar/{id}',[UserAPIController::class,'profpic']);
 Route::get('/items',[ItemAPIController::class,'index']);
 Route::get('/gambarBarang/{id}',[ItemAPIController::class,'imgItem']);
+Route::post('/addCart/{id}/{userid}',[CartAPIController::class,'store']);
