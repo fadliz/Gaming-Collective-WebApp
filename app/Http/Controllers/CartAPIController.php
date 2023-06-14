@@ -19,4 +19,27 @@ class CartAPIController extends Controller
 
         return response()->json(['message' => 'Barang berhasil ditambahkan ke keranjang'], 200);
     }
+
+    public function index($userid)
+    {
+        $carts = Cart::where('User_id', $userid)->with('item')->get();
+
+        return response()->json(['carts' => $carts], 200);
+    }
+
+    public function destroy($id)
+{
+    try {
+        // Cari item Cart berdasarkan ID
+        $cart = Cart::findOrFail($id);
+        
+        // Hapus item Cart
+        $cart->delete();
+        
+        return response()->json(['message' => 'Cart item deleted successfully']);
+    } catch (\Exception $e) {
+        return response()->json(['message' => 'Failed to delete Cart item'], 500);
+    }
+}
+
 }
