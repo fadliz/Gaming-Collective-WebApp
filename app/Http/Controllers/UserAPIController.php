@@ -80,4 +80,33 @@ public function register(Request $request)
     return response($image, 200)->header('Content-Type', 'image/jpeg');
 }
 
+public function update(Request $request, $id)
+    {
+        // Logika untuk memperbarui data pengguna dengan ID yang diberikan
+        $user = User::find($id);
+        if ($user) {
+            // Lakukan pembaruan data
+            if($request->username == null)
+            User::where('id',$id)->update([
+                'email' => $request->email
+            ]);
+
+            else if($request->email == null){
+                User::where('id',$id)->update([
+                    'username' => $request->username
+                ]);
+            }
+
+            else{
+                User::where('id',$id)->update([
+                    'username' => $request->username,
+                    'email' => $request->email
+                ]);
+            }
+            return response()->json(['message' => 'User updated successfully']);
+        } else {
+            return response()->json(['error' => 'User not found'], 404);
+        }
+    }
+
 }

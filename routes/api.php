@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/login',[UserAPIController::class,'login']);
 Route::post('/register',[UserAPIController::class,'register']);
+Route::post('/editProfile/{id}', [UserAPIController::class,'update']);
 Route::get('/avatar/{id}',[UserAPIController::class,'profpic']);
 Route::get('/items',[ItemAPIController::class,'index']);
 Route::get('/gambarBarang/{id}',[ItemAPIController::class,'imgItem']);
