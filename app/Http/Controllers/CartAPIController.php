@@ -28,17 +28,27 @@ class CartAPIController extends Controller
     }
 
     public function destroy($id)
+    {
+        try {
+            // Cari item Cart berdasarkan ID
+            $cart = Cart::findOrFail($id);
+            
+            // Hapus item Cart
+            $cart->delete();
+            
+            return response()->json(['message' => 'Cart item deleted successfully',200]);
+        } catch (\Exception $e) {
+            return response()->json(['message' => 'Failed to delete Cart item'], 500);
+        }
+    }
+
+    public function destroyAll($id)
 {
     try {
-        // Cari item Cart berdasarkan ID
-        $cart = Cart::findOrFail($id);
-        
-        // Hapus item Cart
-        $cart->delete();
-        
-        return response()->json(['message' => 'Cart item deleted successfully']);
+        Cart::where('User_id', $id)->delete();
+        return response()->json(['message' => 'All carts deleted successfully'], 200);
     } catch (\Exception $e) {
-        return response()->json(['message' => 'Failed to delete Cart item'], 500);
+        return response()->json(['message' => 'Failed to delete carts'], 500);
     }
 }
 

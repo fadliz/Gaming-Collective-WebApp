@@ -26,4 +26,25 @@ class WishlistAPIController extends Controller
         return response()->json(['success' => 'Item added to Wishlist!'], 200);
     }
 
+    public function index($userid)
+    {
+        $carts = Wishlist::where('User_id', $userid)->with('item')->get();
+
+        return response()->json(['wishes' => $carts], 200);
+    }
+    public function destroy($id)
+    {
+        try {
+            // Cari item Cart berdasarkan ID
+            $cart = Wishlist::findOrFail($id);
+            
+            // Hapus item Cart
+            $cart->delete();
+            
+            return response()->json(['message' => 'Cart item deleted successfully',200]);
+        } catch (\Exception $e) {
+            return response()->json(['message' => 'Failed to delete Cart item'], 500);
+        }
+    }
+
 }
