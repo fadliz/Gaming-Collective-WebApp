@@ -31,13 +31,15 @@ class ReplyAPIController extends Controller
     $formattedReplies = [];
 
     foreach ($replies as $reply) {
-        $forum = $reply->forum;
-        $user = $forum->user;
+        $user = $reply->user;
 
         $formattedReplies[] = [
-            'reply_id' => $reply->id,
-            'reply_content' => $reply->answers,
-            'user_id' => $user->id,
+            'id' => $reply->id,
+            'post_id' => $reply->post_id,
+            'user_id' => $reply->user_id,
+            'answers' => $reply->answers,
+            'created_at' => $reply->created_at,
+            'updated_at' => $reply->updated_at,
             'username' => $user->username,
         ];
     }
