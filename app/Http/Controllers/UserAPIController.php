@@ -80,6 +80,17 @@ public function register(Request $request)
     return response($image, 200)->header('Content-Type', 'image/jpeg');
 }
 
+    public function profile($url) 
+    {
+        if (!$url) {
+            return response()->json(['error' => 'User not found'], 404);
+        }
+
+        $image = Storage::disk('public')->get($url);
+
+        return response($image, 200)->header('Content-Type', 'image/jpeg');
+    }
+
 public function update(Request $request, $id)
     {
         // Logika untuk memperbarui data pengguna dengan ID yang diberikan
